@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>회원 가입</h1>
+    <form action="/join" method="post">
+      <fieldset>
+        <legend>회원 정보 입력</legend>
+        <p>
+          <label for="user id"><strong>아이디</strong></label
+          ><br />
+          <input
+            type="text"
+            id="user id"
+            name="user id"
+            placeholder="아이디를 입력하세요."
+            required
+            autofocus
+          />
+        </p>
+        <p>
+          <label for="user password"><strong>비밀번호</strong></label
+          ><br />
+          <input
+            type="password"
+            id="user password"
+            name="user password"
+            required
+          />
+        </p>
+        <p>
+          <label for="user-password2"><strong>비밀번호 확인</strong></label
+          ><br />
+          <input
+            type="password"
+            id="user password2"
+            name="user password2"
+            required
+          />
+        </p>
+        <p>
+          <label for="user name"><strong>이름</strong></label
+          ><br />
+          <input type="text" id="user name" name="user name" required />
+        </p>
+        <p>
+          <label for="user email"><strong>이메일</strong></label
+          ><br />
+          <input type="text" id="user email" name="user email" required />
+        </p>
+        <p>
+          <label for="user number"><strong>전화번호</strong></label
+          ><br />
+          <input
+            type="phone"
+            id="user number"
+            name="user number"
+            maxlength="11"
+            required
+          />
+        </p>
+        <p>
+          <label for="user birth"><strong>생년월일</strong> </label>
+          <br />
+          <input type="date" id="user birth" name="user birth" required />
+        </p>
+        <p>
+          <strong>성별</strong><br />
+          <label for="male"
+            ><input type="radio" id="male" name="user sex" value="male" />
+            남성</label
+          >
+          <br />
+          <label for="female"
+            ><input type="radio" id="female" name="user sex" value="female" />
+            여성</label
+          >
+        </p>
+
+        <p>
+          <strong>취미</strong><br />
+          <label for="java">
+            <input type="checkbox" id="java" name="user hobby" value="java" />
+            Java
+          </label>
+          <label for="HTML">
+            <input type="checkbox" id="HTML" name="user hobby" value="HTML" />
+            HTML
+          </label>
+          <label for="Spring Boot">
+            <input
+              type="checkbox"
+              id="Spring Boot"
+              name="user hobby"
+              value="Spring Boot"
+            />
+            Spring Boot
+          </label>
+        </p>
+
+        <p>
+          <strong>지역</strong> <br />
+          <label for="location">
+            <select name="location" id="location">
+              <option value="서울">서울</option>
+              <option value="서울">경기</option>
+              <option value="서울">인천</option>
+              <option value="서울">부산</option>
+              <option value="서울">대전</option>
+              <option value="서울">강원</option>
+              <option value="서울">천안</option>
+            </select>
+          </label>
+        </p>
+
+        <p>
+          <strong>프로필 사진</strong><br />
+          <input type="file" id="" name="" />
+        </p>
+
+        <p>
+          <strong>자기소개</strong><br />
+          <label for="user inro">
+            <textarea
+              name="user inro"
+              id="user inro"
+              cols="55"
+              rows="6"
+            ></textarea>
+          </label>
+        </p>
+
+        <div>
+          <input type="submit" value="회원가입" />
+          <input type="button" value="다시작성" />
+        </div>
+      </fieldset>
+    </form>
+  </body>
+</html>

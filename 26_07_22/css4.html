@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style4.css" />
+  </head>
+  <body>
+    <!-- 블릿 제거, menu class 글자색 빨간색, 글씨 굵게 -->
+    <!-- id는 큰 구역을 나눌 때 씀, 중복 불가 -->
+    <ul>
+      <li class="menu">홈</li>
+      <li class="menu">소개</li>
+      <li>공지사항</li>
+    </ul>
+
+    <!-- 자식 선택자 : .box-1 내에 있는 p 태그만 보라색 -->
+    <div class="box-1">
+      <p>문장_1</p>
+      <p>문장_2</p>
+    </div>
+
+    <!-- .box-2 첫 번째 p는 하늘색, 두 번째는 분홍색-->
+    <!-- .box-2 p:nth-child(1), .box-2 p:nth-child(2) -->
+    <!-- .box-2 p:nth-child(odd), .box-2 p:nth-child(even), .box-2 p:nth-child(2n) -->
+    <div class="box-2">
+      <p>문장_1</p>
+      <p>문장_2</p>
+    </div>
+
+    <form>
+      <input type="text" placeholder="아이디" />
+      <input type="password" placeholder="비밀번호" />
+      <input type="submit" value="로그인" />
+    </form>
+
+    <hr />
+    <img src="imgs/cat1.jpg" alt="공양이1" />
+    <img src="imgs/cat2.jpg" alt="공양이2" />
+    <img src="imgs/cat3.jpg" alt="공양이3" />
+  </body>
+</html>

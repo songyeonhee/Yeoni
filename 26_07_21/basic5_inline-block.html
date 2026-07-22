@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inline Block</title>
+    <style>
+      h3 {
+        display: inline-block;
+        /* h3 블럭 요소를 inline-block으로 변경하여 이미지 옆에 설명이 위치하도록 함 */
+        vertical-align: top;
+        /* 인라인 블록 요소에서만 사용 가능한 정렬 기능, 기본적으로 bottom 정렬 */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 인라인 블럭 요소 : 넓이/높이는 가질 수 있지만 줄 바뀜은 되지 않음, 일자로 나열 -->
+    <img src="imgs/cat1.jpg" width="300" alt="공양이_1" title="애옹1" />
+    <img src="imgs/cat2.jpg" width="300" alt="공양이_2" title="애옹2" />
+    <img src="imgs/cat3.jpg" width="300" alt="공양이_3" title="애옹3" />
+    <img src="imgs/cat4.jpg" width="300" alt="공양이_4" title="애옹4" />
+    <!-- alt : 사진에 의미만 부여함, 웹 접근성 및 사진 출력 불가 시 해당 정보 제공 -->
+    <!-- tittle : 사진 위에 마우스 호버 시 내용 노출 -->
+
+    <div>
+      <h2>이 공양이는 너무 귀엽습니다.</h2>
+      <img src="imgs/cat1.jpg" width="300" alt="공양이_1" title="애옹1" />
+      <h3>
+        야무지게 모은 앞발, <br />
+        뽀송한 솜털, <br />
+        얼짱 각도까지 완벽합니다.
+      </h3>
+    </div>
+
+    <hr />
+    <!-- 경계 수평선 -->
+
+    <video autoplay muted loop width="400">
+      <source src="media/jungKook.mp4" typle="video/mp4" />
+    </video>
+    <!-- video : 기본적인 인라인 기본 요소, 태그 내에 바로 영상 삽입은 바람직하지 않음 -->
+    <!-- autoplay : 자동 재생이나 소리가 있을 경우 재생되지 않음, muted : 소리를 끄면 자동 재생됨 -->
+    <!-- loop : 영상이 계속 반복 -->
+
+    <video controls width="400">
+      <source src="media/jungKook.mp4" typle="video/mp4" />
+      <!-- controls : 소리, 전체 화면, 일시 정지 등 사용자가 컨트롤 가능  -->
+    </video>
+  </body>
+</html>

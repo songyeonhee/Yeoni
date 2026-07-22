@@ -1,0 +1,34 @@
+ul,
+li {
+  list-style: none;
+}
+
+.menu {
+  color: brown;
+  font-weight: bold;
+  /* HTML 자체에 strong 태그 사용 권장 */
+}
+
+.box-1 p {
+  color: violet;
+}
+
+.box-2 p:nth-child(odd) {
+  color: paleturquoise;
+}
+
+.box-2 p:nth-child(even) {
+  color: pink;
+}
+
+form input[type="text"] {
+  border: 2px solid brown;
+}
+
+img {
+  width: 300px;
+}
+
+img[alt="공양이1"] {
+  border: 5px solid brown;
+}
