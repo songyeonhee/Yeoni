@@ -1,23 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+hr {
+  width: 1000px;
+  margin: auto;
+}
+
+.container {
+  text-align: center;
+  width: 1000px;
+  height: 400px;
+  margin: auto;
+}
+
+.box {
+  display: inline-block;
+  width: 215px;
+  height: 310px;
+}
+
 .box img {
-  width: 300px;
-  height: 300px;
+  width: 215px;
+  height: 215px;
 }
 
-.box1 p:nth-of-type(1) {
-  color: rgb(90, 90, 90);
-  font-size: 18px;
+.box p:nth-of-type(1) {
+  color: #666;
+  font-size: 14px;
 }
 
-.box1 p:nth-of-type(2) {
-  font-size: 17px;
+.box p:nth-of-type(2) {
+  font-size: 14px;
 }
 
-.box1 span:nth-of-type(1) {
-  font-size: 17px;
-  color: rgb(90, 90, 90);
+.box span:nth-of-type(1) {
+  font-size: 14px;
+  color: #666;
 }
 
-.box1 span:nth-of-type(2) {
+.box span:nth-of-type(2) {
   font-size: 20px;
   color: red;
+}
+
+.box span:nth-of-type(4) {
+  font-size: 12px;
+  color: rgb(255, 255, 255);
+  background-color: rgb(243, 116, 183);
 }
