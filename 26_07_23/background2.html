@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    section {
+      width: 100%;
+      height: 300px; /* 높이 100% 보이는 만큼 다 채워넣으라는 의미 */
+    }
+    
+
+    .section1 {
+      /* background-color: bisque;
+      background-image: url(images/back1.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: 50% 50%; */
+      background: bisque url(images/back1.jpg) no-repeat 50% 50% / cover;
+    }
+    .section2 {
+      background-color: lightblue;
+      background-image: url(images/back2.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: 50% 50%;
+    }
+    .section3 {
+      background-color: lightgoldenrodyellow;
+      background-image: url(images/back3.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: 50% 50%;
+      background-attachment: fixed; /* 해당 그림이 고정되어 있는 것처럼 넘어간다 */
+    }
+    .section4 {
+      background-color: lightpink;
+      background-image: url(images/back4.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: 50% 50%;
+    }
+    .section5 {
+      background-color: lightyellow;
+      background-image: url(images/back5.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: 50% 50%;
+    }
+  </style>
+  <body>
+    <section class="section1">배경 1</section>
+    <section class="section2">배경 2</section>
+    <section class="section3">배경 3</section>
+    <section class="section4">배경 4</section>
+    <section class="section5">배경 5</section>
+  </body>
+</html>

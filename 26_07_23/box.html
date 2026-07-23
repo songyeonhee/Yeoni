@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box1 {
+        width: 200px;
+        height: 200px;
+        color: white;
+        background: burlywood;
+      }
+      .box2 {
+        width: 25%;
+        height: 200px;
+        color: white;
+        background: lightcoral;
+        /* 폭은 % 지정이 가능하지만 높이는 %로 지정할 수 없음 */
+      }
+
+      .box3 {
+        width: 200px;
+        height: 200px;
+        color: white;
+        background: lightpink;
+        padding-left: 20px; /* 왼쪽 안여백 20px; 전체 폭이 220px이 됨 */
+        margin-left: 50px; /* 왼쪽 바깥 여백 50px; */
+        margin-top: 50px;
+      }
+
+      .box4 {
+        width: 200px;
+        height: 200px;
+        color: white;
+        background-color: mistyrose;
+        margin: 0 auto; /* 바깥 위+아래 여백 0px; 바깥 좌측+우측 auto */
+      }
+
+      /* padding : 10px > "위 좌 우 아래" 안쪽 여백 10px */
+      /* margin : 10px > "위 좌 우 아래" 바깥 여백 10px */
+      /* margin : 10px 20px 30px; > 위10px 왼쪽오른쪽20px 아래30px */
+    </style>
+  </head>
+
+  <body>
+    <div class="box box1">박스 1</div>
+    <div class="box box2">박스 2</div>
+    <div class="box box3">박스 3</div>
+    <div class="box box4">박스 4</div>
+  </body>
+</html>

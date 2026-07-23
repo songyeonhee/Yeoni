@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      header {
+        width: 1000px;
+        height: 500px;
+        margin: 0 auto;
+        border: 1px solid;
+        background-color: lightcoral;
+        background-image: url(images/tree.png);
+        background-repeat: no-repeat; /* 이미지 반복하지 않음*/
+        /* background-position: right top; */
+        background-position: 60% 50%; /* 좌우+상하 */
+      }
+      section {
+        width: 1000px;
+        height: 500px;
+        margin: 0 auto;
+        border: 1px solid;
+        background-color: blanchedalmond;
+        background-image: url(images/top.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-size: cover;
+      }
+
+      footer {
+        width: 1000px;
+        height: 500px;
+        margin: 0 auto;
+        border: 1px solid;
+        background-color: lightpink;
+        background-image: url(images/dot.png), url(images/muzi.png);
+        background-repeat: no-repeat, no-repeat;
+        background-position:
+          lef top,
+          right bottom;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 
+    <div class="header">예전 방식 (헤더)</div>
+    <div class="main">예전 방식 (메인)</div>
+    <div class="footer">예전 방식 (푸터)</div>
+     -->
+
+    <!-- 아래와 같이 의미 있는 태그를 "시멘틱 태그"라고 칭함 -->
+    <header>요즘 헤더</header>
+    <section>요즘 메인 (main 태그도 있음)</section>
+    <footer>요즘 푸터</footer>
+  </body>
+</html>

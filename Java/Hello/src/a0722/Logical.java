@@ -60,9 +60,9 @@ public class Logical {
         // 조건 1) 100의 배수가 아니면서 4의 배수이다.
         // 조건 3) 400의 배수이다.
        if((year%100 != 0 && year%4 == 0) || year%400 ==0) {
-        System.out.println("윤년입니다!");
+        System.out.println("True");
     }else{
-        System.out.println("아쉽게도 아닌걸요..");
+        System.out.println("False");
     }
 
     }
