@@ -20,16 +20,17 @@ public class Homework1 {
     public static void main(String[] args) {
         Scanner nm = new Scanner(System.in);
         int[] number = new int[3];
-        number[i] = nm.nextInt();
         
 
-        for(int i=0; i<3; i++) {
-            System.out.print("숫자를 입력해주세요. : ");
-            System.out.println((i+1) + "번 째 숫자 : " + number[i]);
-        }
-           
-
-           
-
-    }
+        for(int i=0; i<number.length; i++) {
+            System.out.print((i+1) 
+            + "번 째 숫자를 입력해주세요. : ");
+            number[i] = nm.nextInt();
+            }
+        
+        for(int i=0; i<number.length; i++){
+       System.out.println((i+1) + "번 째 숫자 : " + number[i]);}
+    nm.close();
+   
+}
 }
