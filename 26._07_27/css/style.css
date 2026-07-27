@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  /* 상속되는 스타일 ex) 글씨체, 글씨 크기 */
+  font-family: "나눔고딕";
+}
+
+h1,
+p {
+  /* 그룹 선택자, 각각의 선택자에 같은 스타일 지정 */
+}
+
+div p {
+  /* 자손 선택자 */
+
+  background-color: lavender;
+}
+
+div p:hover {
+  /* 가상 클래스 선택자 */
+  background-color: plum;
+  color: snow;
+}
+
+h3 {
+  color: lightgreen;
+}
+
+.title {
+  color: lightpink;
+}
+
+#menu {
+  color: white;
+  background-color: lightpink;
+}

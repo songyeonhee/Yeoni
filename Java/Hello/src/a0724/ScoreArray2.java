@@ -37,5 +37,6 @@ public class ScoreArray2 {
             double avg = (double) sum / 3;
             System.out.printf("\t%d\t%d\t%d\t%d\t%d\t%.1f%n", i+1, kor[i], eng[i], math[i], sum, avg);
         }
+        sc.close();
     }
 }

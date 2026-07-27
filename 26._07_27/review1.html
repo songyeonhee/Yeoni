@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+  <!-- 문서의 각종 정보들 -->
+  <head>
+    <!-- 한글에 관련 -->
+    <meta charset="UTF-8" />
+    <!-- 휴대폰에 맞게끔 크기 설정 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .list1 {
+        list-style: none;
+        /* float: left;를 li에 적용하려면 list1에 높이를 반드시 지정 */
+        height: 30px; /* 직접 높이 지정 */
+        /* overflow: hidden; 자동 높이 구현 */
+      }
+
+      /* .list1 li {
+        display: inline-block;
+        background-color: lightcoral;
+      } */
+
+      .list1 li {
+        float: left;
+        background-color: lightpink;
+      }
+
+      .list2 {
+        list-style: none;
+      }
+
+      .list3 {
+        list-style: square;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>헤딩 태그</h1>
+    <p>단락/문단</p>
+    줄바꿈 <br />
+    <hr />
+    <!-- 수평선 -->
+    <pre>
+        화면에 보이는 그대로 출력
+            줄바꿈/ 들여쓰기 등 포함
+        </pre
+    >
+
+    <span><strong>굵게 중요</strong></span>
+    <span>기울임</span>
+    <span><u>밑 줄</u></span>
+    <span><mark>형광펜</mark></span>
+    <span><del>삭제</del></span>
+    <span></span>
+
+    <!-- 
+<b>굵게</b>
+
+<strong>중요</strong>
+
+<em>기울임<em> : i 태그 X
+
+<ins>밑줄</ins> : u 태그 X
+
+<mark>형광펜</mark>
+
+<del>삭제</del>
+
+H<sub>2</sub>O
+
+2<sup>3</sup> -->
+    <p>
+      <a href="https://www.google.com/">구글</a>
+      <a href="https://www.google.com/" target="_blank">새 창 열기</a>
+    </p>
+
+    <p>
+      <img src="imgs/cat2.jpg" width="300" alt="공양이2" />
+      <img src="imgs/cat3.jpg" style="width: 300px" alt="공양이3" />
+    </p>
+
+    <!-- <ul type="square"> 선호되는 방법은 아님-->
+
+    <ul class="list1">
+      <li>사과</li>
+      <li>배</li>
+      <li>포도</li>
+    </ul>
+
+    <ul class="list2">
+      <li>사과</li>
+      <li>배</li>
+      <li>포도</li>
+    </ul>
+
+    <ul class="list3">
+      <li>사과</li>
+      <li>배</li>
+      <li>포도</li>
+    </ul>
+
+    <ol>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+    </ol>
+
+    <!-- 사용자 정의 목록 -->
+    <dl>
+      <dt>HTML</dt>
+      <dd>웹의 구조</dd>
+      <dt>CSS</dt>
+      <dd>디자인</dd>
+    </dl>
+    <table border="1px;">
+      <tr>
+        <th>이름</th>
+        <th>나이</th>
+      </tr>
+      <tr>
+        <td>홍길동</td>
+        <td>20</td>
+      </tr>
+    </table>
+
+    <form>
+      <input type="text" />
+      <input type="password" />
+      <input type="email" />
+      <input type="number" />
+      <input type="date" />
+      <input type="submit" />
+    </form>
+
+    <form action="">
+      <input type="text" />
+      <textarea></textarea>
+      <select>
+        <option>HTML</option>
+        <option>CSS</option>
+      </select>
+    </form>
+    <p>
+      <video autoplay muted loop width="400" height="" type="video/mp4">
+        <source src="media/iceream_phone.mp4" />
+      </video>
+      <video controls width="400" height="" type="video/mp4">
+        <source src="media/iceream_phone.mp4" />
+      </video>
+    </p>
+  </body>
+</html>
