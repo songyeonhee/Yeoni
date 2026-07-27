@@ -18,7 +18,7 @@ public class Homework1 {
         int[] score = {85, 92, 78, 96, 88};
 
         int max = score[0];
-        int turn = 0;
+        int turn = 1;
 
         for(int i=1; i<score.length; i++) {
             if(score[i]>max) {
