@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .round1 {
+        border-radius: 50%;
+      }
+
+      .box {
+        width: 200px;
+        height: 200px;
+        border: 5px solid lightblue;
+        margin-top: 50px;
+      }
+
+      .box1 {
+        border-radius: 50%;
+      }
+
+      .box2 {
+        border-radius: 100px;
+      }
+
+      .box3 {
+        border-radius: 25px 0 25px 0;
+        /* 좌상 우상 우하 좌하 */
+      }
+
+      .box4 {
+        width: auto;
+        height: auto;
+        display: inline-block;
+        padding: 5px 20px;
+        border-radius: 15px;
+        background-color: lightblue;
+      }
+
+      .box4:hover {
+        background-color: lightskyblue;
+        color: snow;
+        cursor: pointer;
+      }
+
+      .box5 {
+        background-image: url(images/cat2.jpg);
+        background-position: 50% 50%;
+        background-size: cover;
+        border-radius: 50%;
+        box-shadow: 5px 5px 10px #555;
+        /* 박스의 그림자 : X위치 Y위치 블러 */
+        /* X위치 : 음수(좌측), 양수(우측) */
+        /* Y위치 : 음수(상단), 양수(하단) */
+      }
+
+      .box6 {
+        border-radius: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <img src="images/cat1.jpg" alt="공양이 1" />
+    <img class="round1" src="images/cat2.jpg" alt="공양이 2" />
+    <div class="box box1">동구라미 1</div>
+    <div class="box box2">동구라미 2</div>
+    <div class="box box3">동구라미 3</div>
+    <div class="box box4">동구라미 4</div>
+    <div class="box box5">동구라미 5</div>
+    <div class="box box6">동구라미 6</div>
+  </body>
+</html>
