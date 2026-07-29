@@ -25,6 +25,7 @@ public class Homework2 {
         System.out.println("3. 곱하기");
         System.out.println("4. 나누기");
         System.out.println("5. 종료");
+        System.out.println("==================================");
         System.out.print("작업 선택 : ");
     }
     public static void main(String[] args) {
@@ -106,10 +107,13 @@ public class Homework2 {
         System.out.print("Number 2) ");
         int num2 = sc.nextInt();
 
-        result = num1/num2;
+        if(num2==0) {
+            System.out.print("0으로 나눌 수 없습니다.");
+        }else {
+            result = num1/num2;
 
-        System.out.print(num1 + " / " + num2 + " = ");
-        System.out.println(result);
+            System.out.print(num1 + " / " + num2 + " = ");
+            System.out.println(result);}
     }
 
     

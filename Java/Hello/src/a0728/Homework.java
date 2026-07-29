@@ -14,7 +14,6 @@ import java.util.Scanner;
 
 public class Homework {
     static Scanner sc = new Scanner(System.in);
-    static int result = 0;
 
 
     public static void calc() {
@@ -61,62 +60,67 @@ public class Homework {
         }
     }
 
-    private static int input(int i, int j) {
-        System.out.print("Number 1) ");
-        int i = sc.nextInt();
+    private static int[] input() {
+        int inputArr[] = new int[2];
+        System.out.print("Number 1 : ");
+        int num1 = sc.nextInt();
+        inputArr[0] = num1;
 
-        System.out.print("Number 2) ");
-        int j = sc.nextInt();
+        System.out.println("Number 2 : ");
+        int num2 = sc.nextInt();
+        inputArr[1] = num2;
+
+        return inputArr;
+       
     }
     
 
-    private static int add() {
+    private static void add() {
+        int[] numArr = input();
 
-        result = num1+num2;
+        int num1 = numArr[0];
+        int num2 = numArr[1];
+
+        int result = num1+num2;
 
         System.out.print(num1 + " + " + num2 + " = ");
         System.out.println(result);
-
-        return a+b;
     }
 
     private static void min() {
-        System.out.print("Number 1) ");
-        int num1 = sc.nextInt();
+        int[] numArr = input();
 
-        System.out.print("Number 2) ");
-        int num2 = sc.nextInt();
+        int num1 = numArr[0];
+        int num2 = numArr[1];
 
-        result = num1-num2;
+        int result = num1-num2;
 
         System.out.print(num1 + " - " + num2 + " = ");
         System.out.println(result);
     }
 
     private static void mul() {
-        System.out.print("Number 1) ");
-        int num1 = sc.nextInt();
+        int[] numArr = input();
 
-        System.out.print("Number 2) ");
-        int num2 = sc.nextInt();
+        int num1 = numArr[0];
+        int num2 = numArr[1];
 
-        result = num1*num2;
+        int result = num1*num2;
 
         System.out.print(num1 + " X " + num2 + " = ");
         System.out.println(result);
     }
 
     private static void div() {
-        System.out.print("Number 1) ");
-        int num1 = sc.nextInt();
+        int[] numArr = input();
 
-        System.out.print("Number 2) ");
-        int num2 = sc.nextInt();
+        int num1 = numArr[0];
+        int num2 = numArr[1];
 
         if(num2==0) {
             System.out.print("0으로 나눌 수 없습니다.");
         }else {
-            result = num1/num2;
+            int result = num1/num2;
 
             System.out.print(num1 + " / " + num2 + " = ");
             System.out.println(result);}
