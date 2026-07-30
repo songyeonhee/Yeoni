@@ -1,4 +1,4 @@
-package a0722;
+package a26_0722;
 
 public class AssignMent {
     public static void main(String[] args) {

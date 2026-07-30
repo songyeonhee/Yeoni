@@ -1,4 +1,4 @@
-package a0727.homework;
+package a26_0727.homework;
 
 // 문제 4. 짝수는 더하고 홀수는 빼기
 

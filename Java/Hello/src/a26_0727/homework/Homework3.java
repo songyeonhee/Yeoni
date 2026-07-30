@@ -1,4 +1,4 @@
-package a0727.homework;
+package a26_0727.homework;
 
 // 문제 3. 가장 큰 짝수 찾기 
 

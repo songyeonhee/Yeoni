@@ -1,4 +1,4 @@
-package homework;
+package a26_0724.homework;
 
 // 중첩 for문을 사용하여 3단 구구단만 출력하세요.
 // [3 단]

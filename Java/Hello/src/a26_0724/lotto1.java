@@ -1,3 +1,4 @@
+package a26_0724;
 import java.util.Arrays;
 
 public class lotto1 {

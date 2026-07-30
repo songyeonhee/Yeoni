@@ -1,4 +1,4 @@
-package a0727.homework;
+package a26_0727.homework;
 
 // 문제 2. 60점 이상만 출력하기
 

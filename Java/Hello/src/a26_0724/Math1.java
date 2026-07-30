@@ -1,3 +1,4 @@
+package a26_0724;
 public class Math1 {
     public static void main(String[] args) {
         // 절대 값

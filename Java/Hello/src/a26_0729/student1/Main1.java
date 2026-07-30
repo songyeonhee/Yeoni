@@ -1,4 +1,4 @@
-package a0729.student1;
+package a26_0729.student1;
 
 public class Main1 {
     public static void main(String[] args) {

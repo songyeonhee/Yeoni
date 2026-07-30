@@ -1,4 +1,4 @@
-package a0728;
+package a26_0728;
 
 public class MethodEx09 {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package a0727.homework;
+package a26_0727.homework;
 
 // 문제 1. 최고 점수 학생 찾기 
 

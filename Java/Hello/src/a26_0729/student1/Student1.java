@@ -1,4 +1,4 @@
-package a0729.student1;
+package a26_0729.student1;
 
 public class Student1 { 
     // 클래스 : 불완전함

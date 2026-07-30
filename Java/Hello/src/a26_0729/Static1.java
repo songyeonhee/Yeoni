@@ -1,4 +1,4 @@
-package a0729;
+package a26_0729;
 
 public class Static1 {
     // int num = 100;

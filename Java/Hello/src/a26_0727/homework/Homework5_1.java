@@ -1,4 +1,4 @@
-package a0727.homework;
+package a26_0727.homework;
 
 import java.util.Scanner;
 

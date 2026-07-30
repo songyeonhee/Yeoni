@@ -1,4 +1,4 @@
-package a0723;
+package a26_0723;
 
 public class Array2 {
     public static void main(String[] args) {

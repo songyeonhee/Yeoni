@@ -1,4 +1,4 @@
-package a0721;
+package a26_0721;
 
 public class Var1 {
     public static void main(String[] args) { // main + Tab

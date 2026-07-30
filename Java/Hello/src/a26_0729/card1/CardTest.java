@@ -1,4 +1,4 @@
-package a0729.card1;
+package a26_0729.card1;
 
 public class CardTest {
     public static void main(String[] args) {

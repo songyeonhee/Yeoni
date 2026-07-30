@@ -1,4 +1,4 @@
-package a0727.homework;
+package a26_0727.homework;
 
 // 점수 분석 프로그램
 // int[] score = {55, 82, 96, 41, 77, 68, 100};

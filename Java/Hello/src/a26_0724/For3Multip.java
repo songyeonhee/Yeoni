@@ -1,3 +1,4 @@
+package a26_0724;
 public class For3Multip {
     // 구구단
     public static void main(String[] args) {

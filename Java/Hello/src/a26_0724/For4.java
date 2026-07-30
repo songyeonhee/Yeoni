@@ -1,3 +1,4 @@
+package a26_0724;
 public class For4 {
     public static void main(String[] args) {
         for(int i = 0; i<=4; i++) {

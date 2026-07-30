@@ -1,3 +1,4 @@
+package a26_0724;
 public class ScoreArray {
 
         // 학생 5명의 국어, 영어, 수학 점수

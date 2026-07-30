@@ -1,4 +1,4 @@
-package a0727;
+package a26_0727;
 
 public class DoWhile1 {
     public static void main(String[] args) {

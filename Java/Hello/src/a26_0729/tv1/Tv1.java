@@ -1,4 +1,4 @@
-package a0729.tv1;
+package a26_0729.tv1;
 
 public class Tv1 {
     static String made = "Samsung";

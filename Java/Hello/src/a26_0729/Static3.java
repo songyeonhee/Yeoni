@@ -1,4 +1,4 @@
-package a0729;
+package a26_0729;
 
 // 일반 메소드
 public class Static3 {
