@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .box {
+        width: 150px;
+        height: 150px;
+        /* position: static 아무 포지션 없음, 기본 값, 생략 가능, 박스가 겹치지 않음 */
+      }
+
+      .box1 {
+        background-color: lavender;
+      }
+
+      .box2 {
+        background-color: gainsboro;
+      }
+
+      .box3 {
+        position: absolute;
+        /* relative가 없을 때에는 화면 자체가 부모가 되어 화면 기준으로 이동 */
+        bottom: 50px;
+        right: 50px;
+        background-color: lavenderblush;
+      }
+      /* relative
+        1) absolute의 부모 역할
+        2) 기준 위치는 원래 있던 위치
+        3) 자리 값 존재
+        4) 겹치는 속성
+        5) 이동 가능하지만 거의 사용하지 않음 */
+
+      /* absolute
+        1) relative의 자식 역할
+        2) 기준 위치는 부모 (화면 전체 or relative 속성 값)
+        3) 자리 값 없음
+        4) 겹치는 속성
+        5) left top right bottom으로 이동 가능 */
+
+      .box4 {
+        background-color: lightpink;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="box box1">박스 1</div>
+    <div class="box box2">박스 2</div>
+    <div class="box box3">박스 3</div>
+    <div class="box box4">박스 4</div>
+  </body>
+</html>

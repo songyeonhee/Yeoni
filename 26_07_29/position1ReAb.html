@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .box {
+        width: 150px;
+        height: 150px;
+        /* position: static 아무 포지션 없음, 기본 값, 생략 가능, 박스가 겹치지 않음 */
+      }
+
+      .box1 {
+        background-color: lavender;
+      }
+
+      .bigbox {
+        position: relative;
+        width: 500px;
+        height: 300px;
+        border: 1px solid #333;
+        margin: 0 auto;
+      }
+
+      .box2 {
+        position: absolute;
+        background-color: gainsboro;
+        right: 50px;
+        bottom: 50px;
+      }
+
+      .box3 {
+        background-color: lavenderblush;
+      }
+
+      .box4 {
+        background-color: lightpink;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="box box1">박스 1</div>
+    <div class="bigbox">
+      <div class="box box2">박스 2</div>
+      <div class="box box3">박스 3</div>
+    </div>
+    <div class="box box4">박스 4</div>
+  </body>
+</html>

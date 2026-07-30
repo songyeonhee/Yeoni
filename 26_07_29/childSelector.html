@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* .one li {
+        border: 1px solid #333;
+      } */
+      .one > li {
+        border: 1px solid #333;
+      }
+      /* 손자는 선택 안됨, 오로지 자식만. */
+    </style>
+  </head>
+  <body>
+    <ul class="one">
+      <li>
+        Main1
+        <ul>
+          <li>sub1</li>
+          <li>sub2</li>
+          <li>sub3</li>
+        </ul>
+      </li>
+      <li>
+        Main2
+        <ul>
+          <li>sub1</li>
+          <li>sub2</li>
+          <li>sub3</li>
+        </ul>
+      </li>
+      <li>
+        Main3
+        <ul>
+          <li>sub1</li>
+          <li>sub2</li>
+          <li>sub3</li>
+        </ul>
+      </li>
+    </ul>
+  </body>
+</html>

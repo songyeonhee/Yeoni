@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.bigbox {
+  position: relative;
+  width: 830px;
+  height: 310px;
+  border: 1px solid black;
+  margin: 50px auto 0;
+}
+
+.box {
+  width: 200px;
+  height: 150px;
+  position: absolute;
+  display: none;
+}
+/* 6개의 박스에 공통적인 크기 */
+/* position: absolute; 설정 시 이미지가 전부 겹치므로 
+전부 안보이게 한 후 하나씩 꺼내씀 */
+
+.box img {
+  display: block;
+  width: 100%;
+}
+
+.box1 {
+  display: block;
+  left: 0;
+  right: 0;
+}
+
+.box2 {
+  display: block;
+  left: 0;
+  top: 160px;
+}
+
+.box3 {
+  display: block;
+  left: 210px;
+  top: 0;
+  width: 200px;
+  height: 310px;
+  /* box3에 별도의 너비와 높이를 준다 */
+}
+
+.box4 {
+  display: block;
+  left: 420px;
+  top: 0;
+}
+
+.box5 {
+  display: block;
+  left: 630px;
+}
+
+.box6 {
+  display: block;
+  bottom: 0;
+  left: 420px;
+  width: 410px;
+  height: 150px;
+}
+
+.box::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 0;
+  height: 100%;
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.box:hover::before {
+  width: 100%;
+  opacity: 1;
+}
+
+.box6::before {
+  width: 100%;
+  height: 0;
+}
+
+.box6:hover::before {
+  height: 100%;
+  transition: all 0.5s;
+}
+
+.box1 p {
+  position: absolute;
+  width: 100%;
+  height: 70%;
+  left: 0;
+  top: 0;
+  text-align: center;
+  color: #fff;
+  box-sizing: border-box;
+  background-color: url(../images/more.png) no-repeat;
+  transition: all 0.5s;
+  opacity: 0;
+}
+
+.box:hover p {
+  opacity: 1;
+}
