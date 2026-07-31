@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>transition1</title>
+
+    <style>
+      /* animation : 자동으로 실행 (자바스크립트로 수동 실행 가능)
+        @keyframe 사용, 여러 단계 가능, 반복 횟수 설정 가능(infitine, n번), 복잡한 움직임 */
+      /* transition : 상태가 변경될 때
+        :hover 사용, 시작과 끝이 있음, 반복 기능 없음, 간단한 움직임 */
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: lavenderblush;
+        /* transition:
+          width 1s,
+          background-color 1s; */
+
+        transition: all 1s;
+      }
+      .box:hover {
+        width: 300px;
+        background-color: lavender;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+  </body>
+</html>

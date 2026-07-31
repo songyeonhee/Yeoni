@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>animation_practice</title>
+    <style>
+      .bg {
+        width: 100px;
+        height: 100px;
+        left: 300px;
+        top: 100px;
+        border-radius: 50px;
+        border: 1px solid #f9c9c9;
+        position: relative;
+        background: url(img/bg-main1.png) no-repeat 50% 50%;
+        animation: bg-ani 3s ease-in infinite alternate;
+      }
+
+      @keyframes bg-ani {
+        0% {
+          transform: translateY(0);
+        }
+
+        100% {
+          transform: translateY(500px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bg"></div>
+  </body>
+</html>

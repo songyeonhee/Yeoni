@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>animation7</title>
+    <style>
+      #myball1 {
+        position: relative;
+        width: 100px;
+        height: 100px;
+        left: 500px;
+        border: 1px solid#333;
+        border-radius: 50px;
+        background: url(img/f1.png) no-repeat 50% 50%;
+        animation: myani1 3s forwards;
+        /* 기본 : 애니메이션 효과가 끝나면 맨 처음 상태로로 돌아감
+        forwords : 효과가 끝난 자리에서 종료 */
+      }
+
+      /* 시간을 나눔 */
+      @keyframes myani1 {
+        0% {
+          /* 0초에는 */
+          left: 500px;
+        }
+        100% {
+          /* 3초에는 */
+          left: 10px;
+        }
+      }
+
+      #myball2 {
+        position: relative;
+        width: 100px;
+        height: 100px;
+        border: 1px solid#333;
+        border-radius: 50px;
+        background: url(img/f1.png) no-repeat 50% 50%;
+        animation: myani2 3s 3s forwards;
+        /* 3s 3s 애니메이션 이동 시간 + animation-delay: 3초 지난 후 애니메이션 시작;*/
+        /* 이름 + 진행  시간 + 지연 시간 + 애니메이션 끝난 후 도착 지점에 유지*/
+      }
+
+      @keyframes myani2 {
+        0% {
+          left: 10px;
+        }
+        100% {
+          left: 500px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="myball1"></div>
+    <div id="myball2"></div>
+  </body>
+</html>
