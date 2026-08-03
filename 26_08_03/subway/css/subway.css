@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR:wght@100..900&family=Orbit&display=swap");
+
+* {
+  font-family: "Noto Sans KR", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.header {
+  width: 100%;
+  height: 170px;
+}
+
+.content {
+  padding-bottom: 70px;
+}
+
+.line-box {
+  height: 5px;
+  background-color: #009223;
+  margin-bottom: 40px;
+}
+
+.logo {
+  width: 202px;
+  height: 40px;
+  position: absolute;
+  left: 50%;
+  top: 35px;
+}
+
+.logo a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  transform: translateX(-50%);
+}
+
+.logo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+#gnb {
+  width: 100%;
+  height: 41.59px;
+  text-align: center;
+  width: 100%;
+  position: relative;
+}
+
+#nav-bar {
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  margin: 0 auto;
+  overflow: hidden;
+  transition: all 0.3s;
+  background: white;
+}
+
+#nav-bar:hover {
+  height: 305px;
+}
+
+#nav-bar > li:hover > .dp1 {
+  color: #009223;
+}
+
+.dp2 li:hover a {
+  color: #009223;
+  text-decoration: underline;
+}
+
+#nav-bar > li {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.dp1 {
+  display: block;
+  width: 165px;
+  height: 21.594px;
+  color: #292929;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.dp2 {
+  display: block;
+  color: #666666;
+  font-size: 15px;
+  width: 100%;
+  padding-top: 50px;
+}
+
+.dp2 a {
+  display: block;
+  width: 165px;
+  height: 15px;
+  padding: 8px 0 9px;
+  background: white;
+}

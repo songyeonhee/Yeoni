@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      .content1 {
+        width: 100%;
+        height: 400px;
+        border: 1px solid #333;
+        text-align: center;
+        /* text-align: center : 블럭 요소 안의 이미지 또는 글자 좌우 중앙 정렬 */
+      }
+
+      .content1 img {
+        margin-top: 50px;
+      }
+
+      .content2 {
+        width: 100%;
+        height: 400px;
+        border: 1px solid #333;
+      }
+
+      .content2 h1 {
+        width: 250px;
+        height: 225px;
+        border: 1px solid #333;
+        /* h1은 블럭 요소로 text-align: center; 적용되지 않음 */
+        margin: 50px auto 0;
+        /* 넓이가 있는 블럭 요소는 margin : 0 auto 사용 */
+      }
+
+      .content3 {
+        position: relative;
+        width: 100%;
+        height: 400px;
+        border: 1px solid #333;
+      }
+
+      .content3 h1 {
+        position: absolute;
+        width: 250px;
+        height: 225px;
+        border: 1px solid #333;
+        /* 너비/높이 -절반 margin 넣어 중앙 정렬
+        margin-left: -125px;
+        margin-top: -112.5px; */
+        transform: translate(-50%, -50%);
+        left: 50%;
+        top: 50%;
+      }
+
+      .content4 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 400px;
+        border: 1px solid #333;
+      }
+
+      .content4 h1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 300px;
+        height: 250px;
+        border: 1px solid #333;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content1">
+      <img src="images/1.jpg" alt="" />
+    </div>
+
+    <div class="content2">
+      <h1 class="logo"><img src="images/1.jpg" alt="logo1" /></h1>
+    </div>
+
+    <div class="content3">
+      <h1 class="logo"><img src="images/1.jpg" alt="logo1" /></h1>
+    </div>
+
+    <div class="content4">
+      <h1 class="logo"><img src="images/1.jpg" alt="logo1" /></h1>
+    </div>
+  </body>
+</html>
