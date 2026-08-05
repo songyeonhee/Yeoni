@@ -26,7 +26,7 @@ public class MemberMain {
 
                 case "3":
                 case "U":
-                    updateMember();
+                    updateMember(sc);
                     break;
 
                 case "4":
@@ -79,7 +79,7 @@ public class MemberMain {
 
     private static void readMember() {
         System.out.println("================ [ 등록 회원 목록 ] ================");
-        if (memberCount == 1) {
+        if (memberCount == 0) {
             System.out.println("등록된 회원이 존재하지 않습니다.");
             return;
         }
@@ -90,8 +90,31 @@ public class MemberMain {
         }
     }
 
-    private static void updateMember() {
+    private static void updateMember(Scanner sc) {
+        readMember();
         
+        if(memberCount == 0) {
+            System.out.println("등록된 회원이 존재하지 않습니다..");
+            return;
+        }
+
+        System.out.print("수정할 회원의 회원 번호를 입력해주세요 : ");
+        int targetNo = Integer.parseInt(sc.nextLine());
+
+        int findIndex = findBookIndexByNo(targetNo);
+        if(findIndex == -1) {
+            System.out.println("일치하는 회원 번호가 존재하지 않습니다.");
+            return;
+        }
+    }
+
+    private static int findBookIndexByNo(int no) {
+        for(int i = 0; i<memberCount; i++) {
+            if (no == memberList[i].getNo()) {
+                return i;
+            }
+        }
+        return -1;
     }
 
 }
