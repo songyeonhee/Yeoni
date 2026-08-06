@@ -21,6 +21,6 @@ public class Bird extends Animal implements Flyable {
     }
     @Override
     public void move() {
-        System.out.println(name+"이(가) 이동합니다..");
+        System.out.println(species + name+"이(가) 이동합니다..");
     }
 }

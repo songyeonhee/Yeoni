@@ -2,7 +2,7 @@ package a26_0803.over;
 
 public class Main4 {
     public static void main(String[] args) {
-        Student s1 = new Student();
+        // Student s1 = new Student();
         Student s2 = new Student("홍길동");
         Student s3 = new Student("이순신", 25);
 

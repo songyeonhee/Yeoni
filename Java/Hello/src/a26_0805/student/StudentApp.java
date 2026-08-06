@@ -97,6 +97,7 @@ public class StudentApp {
                     break;
             }
         }
+        sc.close();
     }
 
     private static void printMenu() {

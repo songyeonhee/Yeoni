@@ -1,6 +1,6 @@
 package a26_0727.homework;
 
-import java.util.Scanner;
+// import java.util.Scanner;
 
 // 문제 5. 중복 개수 세기
 

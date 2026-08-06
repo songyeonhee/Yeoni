@@ -97,6 +97,8 @@ public class BookApp {
                 break;
             }
         }
+
+        sc.close();
     }
 
     private static void printMenu() {

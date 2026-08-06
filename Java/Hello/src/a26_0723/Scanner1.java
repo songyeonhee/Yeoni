@@ -23,5 +23,7 @@ public class Scanner1 {
         }else {
             System.out.println("양수가 아닙니다.");
         }
+
+        num.close();
     }
 }

@@ -25,6 +25,6 @@ public class Duck extends Animal implements Flyable, Swimmable{
 
     @Override
     public void swim() {
-        System.out.println(name + "이(가) 연못에서 수영합니다.");         
+        System.out.println(color + name + "이(가) 연못에서 수영합니다.");         
     }
 }

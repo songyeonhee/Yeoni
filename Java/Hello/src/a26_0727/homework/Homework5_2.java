@@ -51,6 +51,10 @@ public class Homework5_2 {
         }else {
             System.out.println(targetCount+" : 존재하지 않습니다.");
         }
+
+        targetSc.close();
+        arraySc.close();
+        valueSc.close();
     }
     
 }

@@ -2,7 +2,7 @@ package a26_0805.array;
 
 import java.util.ArrayList;
 
-import a26_0803.student.Student;
+// import a26_0803.student.Student;
 
 public class Compare2 {
     public static void main(String[] args) {
