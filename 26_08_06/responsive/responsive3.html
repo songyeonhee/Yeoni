@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>responsive3</title>
+    <style>
+      .box {
+        width: 25%;
+        height: 250px;
+      }
+
+      .box1 {
+        background-color: lavenderblush;
+      }
+
+      .box2 {
+        background-color: lavender;
+      }
+
+      .box3 {
+        background-color: lemonchiffon;
+      }
+
+      .box4 {
+        background-color: mistyrose;
+      }
+
+      @media screen and (max-width: 600px) {
+        /* 스마트폰용 미디어 쿼리 */
+        .box {
+          float: none;
+          width: 100%;
+        }
+      }
+
+      @media screen and (min-width: 601px) and (max-width: 1023px) {
+        /* 태블릿용 미디어 쿼리 */
+        .box {
+          float: left;
+          width: 50%;
+        }
+      }
+
+      @media screen and (min-width: 1024px) {
+        /* PC용 미디어 쿼리 */
+        .box {
+          float: left;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="box box1">박스 1</div>
+      <div class="box box2">박스 2</div>
+      <div class="box box3">박스 3</div>
+      <div class="box box4">박스 4</div>
+    </div>
+  </body>
+</html>

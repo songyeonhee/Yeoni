@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fff;
+}
+
+.site-header {
+  background-color: mistyrose;
+  color: #fff;
+  padding: 16px;
+  text-align: center;
+}
+
+.site-main {
+  padding: 16px;
+}
+
+.card-section {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.section-title {
+  margin-bottom: 16px;
+  font-size: 20px;
+  text-align: center;
+}
+
+/* card-list) 모바일에서 1열 세로 배치 */
+.card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.card-list .card {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.card-title {
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-size: 18px;
+}
+
+.card-content {
+  margin: 0;
+  font-size: 14px;
+  color: #555555;
+}
+
+/* 1단계) 화면이 768px 이상일 때(태블릿 이상) 2열 배치 */
+@media screen and (min-width: 768px) {
+  .card-list {
+    flex-direction: row;
+    flex-wrap: wrap; /* 줄바꿈 O */
+  }
+
+  .card {
+    /* flex: 1 1 calc(50% - 8px); */
+    flex: 1 1 calc((100% - 16px) / 2);
+    /* 
+    1 > flex-grow; : 남은 공간이 있으면 같은 비율로 늘어남
+    1 > flex-shrink; : 남은 공간이 있으면 같은 비율로 줄어듦
+    calc(33.333% - 16px) > flex basis */
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .card-list {
+    flex-direction: row;
+    flex-wrap: wrap; /* 줄바꿈 O */
+  }
+
+  .card {
+    flex: 1 1 calc((100% - 32px) / 3);
+  }
+}
+
+@media screen and (max-width) and (min-width) {
+}

@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.num {
+  margin: 100px 30px;
+}
+
+.btn {
+  font-size: 15px;
+  padding: 6px 20px;
+  border-radius: 20px;
+  border: none;
+  background: #ebebeb;
+  transition: all 0.25s ease;
+}
+
+.btn:hover {
+  background: #ffede8;
+  transform: translateY(-3px);
+}
+
+.card {
+  width: 200px;
+  height: 150px;
+  background: #e9ffb7;
+  border-radius: 20px 0 20px 0;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+  transition:
+    box-shadow 0.3s,
+    transform 0.3s;
+}
+
+.card:hover {
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+  transform: scale(1.03);
+}
+
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 10px solid rgb(0, 0, 0);
+  border-top: 10px solid white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(365deg);
+  }
+}
