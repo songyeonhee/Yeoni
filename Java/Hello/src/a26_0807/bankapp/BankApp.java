@@ -32,6 +32,16 @@ public class BankApp {
                 
                 case 3: // 입금
                 deposit(sc, accountList);
+                break;
+
+                case 4: // 출금
+                withdraw(sc, accountList);
+                break;
+
+                case 5: // 종료
+                System.out.println("프로그램이 종료되었습니다.");
+                run = false;
+                break;
                 
                 default:
                     System.out.println("오류가 발생하였습니다.");
@@ -41,15 +51,95 @@ public class BankApp {
         sc.close();
     }
 
+    private static void printMenu() {
+        System.out.println("=====================================================================");
+        System.out.println("  #1 계좌 생성  |  #2 계좌 목록  |  #3 예금  |  #4 출금  |  #5 종료  ");
+        System.out.println("=====================================================================");
+        System.out.print("선택 > ");
+    }
+
+    // case 1: 계좌 생성
+     private static void createAccount(Scanner sc, ArrayList<Bank1> accountList) {
+        System.out.println("=================");
+        System.out.println("  #1 계좌 생성  ");
+        System.out.println("=================");
+
+        System.out.print("계좌 번호 > ");
+        String accNum = sc.nextLine();
+
+        System.out.print("예금주 성명 > ");
+        String accOwner = sc.nextLine();
+
+        System.out.print("입금하실 금액 > ");
+        int accBalance =+ Integer.parseInt(sc.nextLine()); 
+
+        accountList.add(new Bank1(accNum, accOwner, accBalance));
+
+        System.out.println("정상적으로 등록되었습니다.");
+        System.out.println("계좌 번호 | " + accNum);
+        System.out.println("예금주 명 | " + accOwner + "님");
+        System.out.println("현재 잔액 | " + accBalance + "원");
+                
+        System.out.println();
+
+    }
+
+    // case: 2 계좌 목록 불러오기
+    private static void readAccount(ArrayList<Bank1> accountList) {
+        System.out.println("=================");
+        System.out.println("  #2 계좌 목록  ");
+        System.out.println("=================");
+        if(accountList.isEmpty()) {
+            System.out.println("등록된 계좌가 존재하지 않습니다.");
+            }
+        else {
+            for(Bank1 ac : accountList) {
+            System.out.println(ac);
+            }
+            }
+        System.out.println();
+    }
+
+    // case: 3 예금
     private static void deposit(Scanner sc, ArrayList<Bank1> accountList) {
         System.out.println("=================");
         System.out.println("     #3 예금     ");
         System.out.println("=================");
         System.out.print("계좌 번호 입력 > ");
         String accNum = sc.nextLine();
-        findAccountByAccNum(accountList, accNum);
+        Bank1 acc = findAccountByAccNum(accountList, accNum);
+
+        if(acc != null) {
+            // 금액 입력 후 입금 실행
+            System.out.print("입금하실 금액 > ");
+            int amount = Integer.parseInt(sc.nextLine());
+            acc.setBalance(acc.getBalance() + amount);
+
+            System.out.println("정상적으로 입금되었습니다.");
+            System.out.println("계좌 번호 | " + acc.getAno());
+            System.out.println("예금주 명 | " + acc.getOwner()+"님");
+            System.out.println("현재 잔액 | " + acc.getBalance() + "원");
+        } 
+        else {
+            System.out.println("존재하지 않는 계좌입니다.");
+        }
+        
+        System.out.println();
     }
 
+    // case 4: 출금
+    private static void withdraw(Scanner sc, ArrayList<Bank1> accountList) {
+        System.out.println("=================");
+        System.out.println("     #4 출금     ");
+        System.out.println("=================");
+        System.out.print("계좌 번호 입력 > ");
+        String accNum = sc.nextLine();
+
+        Bank1 acc = findAccountByAccNum(accountList, accNum)
+        
+    }
+
+    // findAccountByAccNum() : 계좌 번호로 객체 반환
     private static Bank1 findAccountByAccNum(ArrayList<Bank1> accountList, String num) {
         for(Bank1 n : accountList) {
             if(n.getAno().equals(num))
@@ -58,47 +148,5 @@ public class BankApp {
 
         return null;
     }
-    private static void printMenu() {
-        System.out.println("=====================================================================");
-        System.out.println("  #1 계좌 생성  |  #2 계좌 목록  |  #3 예금  |  #4 출금  |  #5 종료  ");
-        System.out.println("=====================================================================");
-        System.out.print("선택 > ");
-    }
-
-     private static void createAccount(Scanner sc, ArrayList<Bank1> accountList) {
-        System.out.println("=================");
-                System.out.println("  #1 계좌 생성  ");
-                System.out.println("=================");
-
-                System.out.print("계좌 번호 > ");
-                String accNum = sc.nextLine();
-
-                System.out.print("예금주 성명 > ");
-                String accOwner = sc.nextLine();
-
-                System.out.print("입금하실 금액 > ");
-                int accBalance =+ Integer.parseInt(sc.nextLine()); 
-
-                accountList.add(new Bank1(accNum, accOwner, accBalance));
-
-                System.out.println("정상적으로 등록되었습니다.");
-                System.out.println("계좌 번호 | " + accNum);
-                System.out.println("예금주 명 | " + accOwner + "님");
-                System.out.println("현재 잔액 | " + accNum + "원");
-
-    }
-    private static void readAccount(ArrayList<Bank1> accountList) {
-        System.out.println("=================");
-                System.out.println("  #2 계좌 목록  ");
-                System.out.println("=================");
-                if(accountList.isEmpty()) {
-                    System.out.println("등록된 계좌가 존재하지 않습니다.");
-                }
-                else {
-                    for(Bank1 ac : accountList) {
-                    System.out.println(ac);
-                    }
-                }
-    }        
-    }
+}
 
