@@ -1,0 +1,34 @@
+package a26_0810.map;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
+
+public class CoffeeMenu2 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+    
+        // 커피 메뉴 추가
+        HashMap<String, Integer> menu = new HashMap<>();
+
+        menu.put("아메리카노", 4000);
+        menu.put("카페라떼", 4500);
+        menu.put("카푸치노", 5000);
+        menu.put("에스프레소", 3500);
+        menu.put("바닐라라떼", 5500);
+        menu.put("카라멜 마끼아또", 6000);
+
+        // 메뉴 가격 조회
+        System.out.print("조회할 커피 이름 > ");
+        String coffeeName = sc.nextLine();
+
+        if(menu.containsKey(coffeeName)) {
+            int price = menu.get(coffeeName); // 커피 이름에 해당하는 메뉴 가격 불러오기
+            System.out.println(coffeeName + "의 가격은 " + price + "원 입니다.");
+        }else {
+            System.out.println("일치하는 메뉴가 없습니다.");
+        }
+
+        sc.close();
+    }
+}
