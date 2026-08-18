@@ -8,11 +8,11 @@ public class StudentApp {
         ArrayList<Student> list = new ArrayList<>();
         Scanner sc = new Scanner(System.in);
         boolean run = true;
-            list.add(new Student("홍길동", 90));
-            list.add(new Student("김영희", 85));
-            list.add(new Student("이철수", 78));
+        list.add(new Student("홍길동", 90));
+        list.add(new Student("김영희", 85));
+        list.add(new Student("이철수", 78));
 
-        while(run) {
+        while (run) {
             printMenu();
             int com;
 
@@ -33,7 +33,7 @@ public class StudentApp {
 
                     list.add(new Student(name, score));
                     System.out.println("정상적으로 등록되었습니다." + "(" + name + ", " + score + "점)");
-                   
+
                     break;
 
                 case 2:
@@ -42,10 +42,9 @@ public class StudentApp {
 
                     Student stu = findStudent(list, name);
 
-                    if(stu != null) {
+                    if (stu != null) {
                         System.out.println(stu);
-                    }
-                    else {
+                    } else {
                         System.out.println("일치하는 학생이 없습니다.");
                     }
                     break;
@@ -56,43 +55,40 @@ public class StudentApp {
 
                     System.out.print("수정할 점수 입력 : ");
                     score = Integer.parseInt(sc.nextLine());
-                    
-                    if(UpdateStudent(list, name, score)) {
+
+                    if (UpdateStudent(list, name, score)) {
                         System.out.println("수정이 완료되었습니다." + "(" + name + ", " + score + "점)");
-                    }
-                    else {
+                    } else {
                         System.out.println("일치하는 학생이 없습니다.");
                     }
                     break;
-                
+
                 case 4:
                     System.out.print("삭제할 학생 이름 : ");
                     name = sc.nextLine();
 
-                    if(deleteStudent(list, name)) {
+                    if (deleteStudent(list, name)) {
                         System.out.println("정상적으로 삭제되었습니다.");
-                    }
-                    else {
+                    } else {
                         System.out.println("일치하는 학생이 없습니다.");
-                    }                   
-                break;
-                
-                case 5:
-                    if(list.isEmpty()) {
-                        System.out.println("등록된 학생이 없습니다.");
                     }
-                    else {
-                        for(Student s : list) {
+                    break;
+
+                case 5:
+                    if (list.isEmpty()) {
+                        System.out.println("등록된 학생이 없습니다.");
+                    } else {
+                        for (Student s : list) {
                             System.out.println(s);
                         }
                     }
-                break;
+                    break;
 
                 case 6:
                     System.out.println("프로그램을 종료합니다.");
                     run = false;
-                break;
-                
+                    break;
+
                 default:
                     break;
             }
@@ -113,17 +109,17 @@ public class StudentApp {
     }
 
     private static Student findStudent(ArrayList<Student> list, String name) {
-       for(Student s : list) {
-        if(s.getName().equals(name)) {
-            return s;
+        for (Student s : list) {
+            if (s.getName().equals(name)) {
+                return s;
+            }
         }
-       }
-       return null;
+        return null;
     }
 
     private static boolean UpdateStudent(ArrayList<Student> list, String name, int newScore) {
-        for(Student s : list) {
-            if(s.getName().equals(name)) {
+        for (Student s : list) {
+            if (s.getName().equals(name)) {
                 s.setScore(newScore);
                 return true;
             }
@@ -132,8 +128,8 @@ public class StudentApp {
     }
 
     private static boolean deleteStudent(ArrayList<Student> list, String name) {
-        for(int i=0; i<list.size(); i++) {
-            if(list.get(i).getName().equals(name)){
+        for (int i = 0; i < list.size(); i++) {
+            if (list.get(i).getName().equals(name)) {
                 list.remove(i);
                 return true;
             }

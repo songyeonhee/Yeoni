@@ -16,7 +16,7 @@ public class StudentGrade {
 
         boolean condition = true;
 
-        while(condition) {
+        while (condition) {
             System.out.println("1) 학생 등록");
             System.out.println("2) 성적 입력");
             System.out.println("3) 성적 출력");
@@ -32,12 +32,12 @@ public class StudentGrade {
                     System.out.print("이름 입력 : ");
                     String name = sc.nextLine();
                     System.out.print("학번 입력 : ");
-                    String studentId = sc. nextLine();
+                    String studentId = sc.nextLine();
                     Student student = new Student(name, studentId);
                     students.add(student);
 
                     System.out.println("학생 등록 완료");
-                    
+
                     break;
 
                 case 2:
@@ -45,68 +45,67 @@ public class StudentGrade {
                     System.out.print("학번 입력 : ");
                     String id = sc.nextLine();
 
-                    Student foundStudent= findStudentById(students, id);
+                    Student foundStudent = findStudentById(students, id);
 
-                    if(foundStudent != null) {
+                    if (foundStudent != null) {
                         System.out.print("성적 재입력 : ");
                         int grade = sc.nextInt();
                         foundStudent.setGrade(grade);
                         System.out.println("성적 입력 완료");
-                    }else {
+                    } else {
                         System.out.println("해당 학번은 존재하지 않습니다.");
                     }
                     break;
                 case 3:
                     System.out.println("성적 출력");
-                    for(Student s : students) {
+                    for (Student s : students) {
                         System.out.println(s);
                     }
                     break;
-                    
-                case 4:   // 점수 수정
+
+                case 4: // 점수 수정
                     System.out.println("==== 점수 수정 ====");
                     System.out.print("학번 입력 : ");
                     String updateId = sc.nextLine();
 
-                    Student updateStudent= findStudentById(students, updateId);
-                    if(updateStudent != null) {
+                    Student updateStudent = findStudentById(students, updateId);
+                    if (updateStudent != null) {
                         System.out.println("현재 성적 : " + updateStudent.getGrade());
                         System.out.print("새로운 성적 입력 : ");
                         int newGrade = sc.nextInt();
                         sc.nextLine();
                         updateStudent.setGrade(newGrade);
                         System.out.println("성적 수정 완료");
-                    }else {
+                    } else {
                         System.out.println("해당 학번은 존재하지 않습니다.");
                     }
-                break;
+                    break;
 
-                case 5:   // 점수 삭제
+                case 5: // 점수 삭제
                     System.out.println("==== 점수 수정 ====");
                     System.out.print("학번 입력 : ");
                     String deleteId = sc.nextLine();
 
-                    Student deleteStudent= findStudentById(students, deleteId);
-                    if(deleteStudent != null) {
+                    Student deleteStudent = findStudentById(students, deleteId);
+                    if (deleteStudent != null) {
                         students.remove(deleteStudent);
                         System.out.println("성적 삭제 완료");
-                    }else {
+                    } else {
                         System.out.println("해당 학번은 존재하지 않습니다.");
                     }
-                break;
+                    break;
                 default:
                     System.out.println("잘못된 선택입니다. 다시 선택해주세요.");
                     break;
             }
         }
 
- sc.close();
+        sc.close();
     }
 
-
     private static Student findStudentById(ArrayList<Student> students, String id) {
-        for(Student s : students){
-            if(s.getStudentId().equals(id))
+        for (Student s : students) {
+            if (s.getStudentId().equals(id))
                 return s;
         }
         return null;

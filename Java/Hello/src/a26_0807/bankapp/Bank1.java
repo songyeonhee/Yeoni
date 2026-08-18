@@ -4,7 +4,7 @@ public class Bank1 {
     private String ano;
     private String owner;
     private int balance = 0;
-    
+
     public Bank1(String ano, String owner, int balance) {
         this.ano = ano;
         this.owner = owner;
@@ -45,5 +45,4 @@ public class Bank1 {
         return "계좌 번호 > " + ano + " | 예금주 > " + owner + "님 | 잔액 > " + balance + "원";
     }
 
-    
 }
