@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 전역 변수
+      var str;
+      var sum = "바람";
+
+      function lover() {
+        str = "산";
+        var sum = "강"; // 지역 변수, 값이 함수 내에서만 유효함
+
+        document.write(`함수 내에서 출력 > ${str}<br>`); // 산
+        document.write(`함수 내에서 출력 > ${sum}<br>`); // 강
+      }
+
+      lover();
+      document.write(`${str}<br>`); // 산
+      document.write(`${sum}<br>`); // 바람
+
+      love();
+      console.log(num);
+    </script>
+  </body>
+</html>

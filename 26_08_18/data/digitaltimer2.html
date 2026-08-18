@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    setInterval(function() {
+    var today = new Date();
+    var year = today.getFullYear(); // today의 년도만 가져와 year 변수에 저장
+    var month = today.getMonth() + 1;
+    var date = today.getDate();
+    var day = today.getDay(); // 0 > 일요일, 1 > 월요일 ~ 6 > 토요일
+
+
+    console.log(year, month, date, day);
+
+    // 가장 좋은 방법 : 배열 사용
+    let dayArray = ["일요일", "월요일", "화요일", "수요일", "목요일", "금요일", "토요일"];
+    var findDay = dayArray[day];
+
+    var hour = today.getHours();
+    var min = today.getMinutes();
+    var sec = today.getSeconds();
+
+
+
+
+
+    document.write(`${year}년 ${month}월 ${date}일 ${findDay} ${hour}시 ${min}분 ${sec}초`);
+    }, 1000);
+  </script>
+</body>
+</html>
