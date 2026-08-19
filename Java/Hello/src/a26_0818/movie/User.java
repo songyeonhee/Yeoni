@@ -82,14 +82,13 @@ public class User {
     // 예매번호 초기화
   }
 
-  public void removeReservationBymovie(String title) {
-    for(int i = reservedMovies.size()-1;i>=0;i--){
-      if(reservedMovies.get(i).equals(title)){
-          reservedMovies.remove(i);
-          reservedSeats.remove(i);
-          reservationNumbers.remove(i);
+  public void removeReservationsBymovie(String title) {
+    for (int i = reservedMovies.size() - 1; i >= 0; i--) {
+      if (reservedMovies.get(i).equals(title)) {
+        reservedMovies.remove(i);
+        reservedSeats.remove(i);
+        reservationNumbers.remove(i);
       }
     }
   }
-
 }

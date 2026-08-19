@@ -23,26 +23,26 @@ public class BankApp {
 
             switch (com) {
                 case 1: // 계좌 생성
-                createAccount(sc, accountList);
-                break;
-                
+                    createAccount(sc, accountList);
+                    break;
+
                 case 2: // 계좌 목록 불러오기
-                readAccount(accountList);
-                break;
-                
+                    readAccount(accountList);
+                    break;
+
                 case 3: // 입금
-                deposit(sc, accountList);
-                break;
+                    deposit(sc, accountList);
+                    break;
 
                 case 4: // 출금
-                withdraw(sc, accountList);
-                break;
+                    withdraw(sc, accountList);
+                    break;
 
                 case 5: // 종료
-                System.out.println("프로그램이 종료되었습니다.");
-                run = false;
-                break;
-                
+                    System.out.println("프로그램이 종료되었습니다.");
+                    run = false;
+                    break;
+
                 default:
                     System.out.println("오류가 발생하였습니다.");
                     break;
@@ -59,7 +59,7 @@ public class BankApp {
     }
 
     // case 1: 계좌 생성
-     private static void createAccount(Scanner sc, ArrayList<Bank1> accountList) {
+    private static void createAccount(Scanner sc, ArrayList<Bank1> accountList) {
         System.out.println("=================");
         System.out.println("  #1 계좌 생성  ");
         System.out.println("=================");
@@ -71,7 +71,7 @@ public class BankApp {
         String accOwner = sc.nextLine();
 
         System.out.print("입금하실 금액 > ");
-        int accBalance =+ Integer.parseInt(sc.nextLine()); 
+        int accBalance = +Integer.parseInt(sc.nextLine());
 
         accountList.add(new Bank1(accNum, accOwner, accBalance));
 
@@ -79,7 +79,7 @@ public class BankApp {
         System.out.println("계좌 번호 | " + accNum);
         System.out.println("예금주 명 | " + accOwner + "님");
         System.out.println("현재 잔액 | " + accBalance + "원");
-                
+
         System.out.println();
 
     }
@@ -89,14 +89,13 @@ public class BankApp {
         System.out.println("=================");
         System.out.println("  #2 계좌 목록  ");
         System.out.println("=================");
-        if(accountList.isEmpty()) {
+        if (accountList.isEmpty()) {
             System.out.println("등록된 계좌가 존재하지 않습니다.");
+        } else {
+            for (Bank1 ac : accountList) {
+                System.out.println(ac);
             }
-        else {
-            for(Bank1 ac : accountList) {
-            System.out.println(ac);
-            }
-            }
+        }
         System.out.println();
     }
 
@@ -109,7 +108,7 @@ public class BankApp {
         String accNum = sc.nextLine();
         Bank1 acc = findAccountByAccNum(accountList, accNum);
 
-        if(acc != null) {
+        if (acc != null) {
             // 금액 입력 후 입금 실행
             System.out.print("입금하실 금액 > ");
             int amount = Integer.parseInt(sc.nextLine());
@@ -117,13 +116,12 @@ public class BankApp {
 
             System.out.println("정상적으로 입금되었습니다.");
             System.out.println("계좌 번호 | " + acc.getAno());
-            System.out.println("예금주 명 | " + acc.getOwner()+"님");
+            System.out.println("예금주 명 | " + acc.getOwner() + "님");
             System.out.println("현재 잔액 | " + acc.getBalance() + "원");
-        } 
-        else {
+        } else {
             System.out.println("존재하지 않는 계좌입니다.");
         }
-        
+
         System.out.println();
     }
 
@@ -136,17 +134,16 @@ public class BankApp {
         String accNum = sc.nextLine();
 
         Bank1 acc = findAccountByAccNum(accountList, accNum);
-        
+
     }
 
     // findAccountByAccNum() : 계좌 번호로 객체 반환
     private static Bank1 findAccountByAccNum(ArrayList<Bank1> accountList, String num) {
-        for(Bank1 n : accountList) {
-            if(n.getAno().equals(num))
+        for (Bank1 n : accountList) {
+            if (n.getAno().equals(num))
                 return n;
         }
 
         return null;
     }
 }
-

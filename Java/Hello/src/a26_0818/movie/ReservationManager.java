@@ -187,44 +187,42 @@ public class ReservationManager {
     }
 
     public void printTicket() {
-      System.out.println("===== 티켓 출력 ======");
-      System.out.print("예매 번호를 입력하세요 > ");
-      int reservationNum = -1; // 예매 번호 초기화
+        System.out.println("===== 티켓 출력 ======");
+        System.out.print("예매 번호를 입력하세요 > ");
+        int reservationNum = -1; // 예매 번호 초기화
 
-      try {
-        reservationNum = Integer.parseInt(sc.nextLine());
-      } catch (Exception e) {
-        System.out.println("숫자를 입력하세요.");
-      }
+        try {
+            reservationNum = Integer.parseInt(sc.nextLine());
+        } catch (Exception e) {
+            System.out.println("숫자를 입력하세요.");
+        }
 
-      if (reservationNum != -1) {
-        // ticket 객체 null이면 생성
-        if(ticket == null) {
-            ticket = new Ticket(this); //this 는 현재 ReservtionManager객체
+        if (reservationNum != -1) {
+            // ticket 객체 null이면 생성
+            if (ticket == null) {
+                ticket = new Ticket(this); // this 는 현재 ReservtionManager객체
             }
             ticket.printTicket(reservationNum);
         }
-      }
+    }
 
+    // public String getReservationDetails(int reservationNum) {
+    // for (User user : users) {
+    // int index = user.getReservationNumbers().indexOf(reservationNum);
 
-
-//     public String getReservationDetails(int reservationNum) {
-//     for (User user : users) {
-//         int index = user.getReservationNumbers().indexOf(reservationNum);
-
-//         // 인덱스가 -1이 아니면 해당 번호가 존재한다는 뜻
-//         if (index != -1) {
-//             return "예매번호: " + user.getReservationNumbers().get(index) +
-//                    " | 영화: " + user.getReservedMovies().get(index) +
-//                    " | 좌석: " + user.getReservedSeats().get(index);
-//         }
-//     }
-//     return null; // 예약 번호가 존재하지 않음
-// }
+    // // 인덱스가 -1이 아니면 해당 번호가 존재한다는 뜻
+    // if (index != -1) {
+    // return "예매번호: " + user.getReservationNumbers().get(index) +
+    // " | 영화: " + user.getReservedMovies().get(index) +
+    // " | 좌석: " + user.getReservedSeats().get(index);
+    // }
+    // }
+    // return null; // 예약 번호가 존재하지 않음
+    // }
 
     public String getReservationDetails(int reservationNum) {
-        for(User user : users) { // user 리스트에 모든 회원을 하나씩 확인
-            if(user.getReservationNumbers().contains(reservationNum)) { // 예매 번호가 존재
+        for (User user : users) { // user 리스트에 모든 회원을 하나씩 확인
+            if (user.getReservationNumbers().contains(reservationNum)) { // 예매 번호가 존재
                 int index = user.getReservationNumbers().indexOf(reservationNum); // 인덱스 번호 가져오기
                 return "예매 번호 : " + user.getReservationNumbers().get(index) +
                         " | 영화 : " + user.getReservedMovies().get(index) +
@@ -239,27 +237,28 @@ public class ReservationManager {
         String title = sc.nextLine();
         Movie movie = getMovie(title); // 삭제할 영화 제목 title
 
-        if(movie != null) {
+        if (movie != null) {
             // 삭제 전 사용자들의 해당 영화 예약을 모두 취소
-            for(User user : users) {
+            for (User user : users) {
                 ArrayList<String> reservedmovies = user.getReservedMovies(); // users에 저장된 모든 영화 리스트를 가져옴
-                if(reservedmovies.contains(title)) {
+                if (reservedmovies.contains(title)) {
                     // 예매 정보 인덱스 확보
-                    ArrayList<Integer> reservationNumbers = new ArrayList<>(user.getReservationNumbers()); // 예매 번호를 모두 가져옴
-                    for(int i=0; i<reservationNumbers.size(); i++) {
+                    ArrayList<Integer> reservationNumbers = new ArrayList<>(user.getReservationNumbers()); // 예매 번호를 모두
+                                                                                                           // 가져옴
+                    for (int i = 0; i < reservationNumbers.size(); i++) {
                         int seatNumber = user.getReservedSeats().get(i);
                         movie.getTheater().cancelSeat(seatNumber);
                         // 좌석 취소
                         System.out.println("[ " + reservationNumbers.get(i) + " ] 예매가 취소되었습니다.");
                     }
-                // 사용자 예약 정보에서 삭제
-                user.removeReservationBymovie(title);
+                    // 사용자 예약 정보에서 삭제
+                    user.removeReservationsBymovie(title);
                 }
             }
-        movies.remove(movie);
+            movies.remove(movie);
             System.out.println("[ " + title + " ] 영화가 삭제되었습니다.");
         } else {
-        System.out.println("해당 영화가 존재하지 않습니다.");
+            System.out.println("해당 영화가 존재하지 않습니다.");
         }
 
     }
@@ -273,83 +272,82 @@ public class ReservationManager {
             return;
         }
 
+        System.out.println("현재 정보: " + movie.getTitle() + ", " + movie.getShowtime() + ", " + movie.getPrice() + "원");
+        System.out.println("수정할 정보를 입력하세요. #미 입력 시 기존 정보 유지됩니다. 또한 모든 예매는 취소 됩니다.");
+        for (User user : users) {
+            ArrayList<String> reservedMovies = user.getReservedMovies();
+            if (reservedMovies.contains(title)) {
+                // 예매 정보 인덱스 확보
+                ArrayList<Integer> reservationNumbers = new ArrayList<>(user.getReservationNumbers());
+                for (int i = 0; i < reservationNumbers.size(); i++) {
+                    if (user.getReservedMovies().get(i).equals(title)) {
+                        int seatNumber = user.getReservedSeats().get(i);
+                        movie.getTheater().cancelSeat(seatNumber);
+                        // 좌석취소
+                        System.out.println("[" + reservationNumbers.get(i) + "] 예매도 함께 취소되었습니다.");
+                    }
+                }
+                // 사용자 측 예약 정보에서 삭제
+                user.removeReservationsBymovie(title);
+            }
+        }
 
+        System.out.print("새 제목:");
+        String newTitle = sc.nextLine();
+        if (newTitle.isEmpty()) {
+            newTitle = movie.getTitle();
+            // 미 입력시 원상태로
+        }
+        System.out.print("새 상영 시간: ");
+        String newTime = sc.nextLine();
+        if (newTime.isEmpty()) {
+            newTime = movie.getShowtime();
+            // 미 입력시 원상태로
+        }
+        System.out.print("새 가격: ");
+        String priceInput = sc.nextLine();
+        int newPrice = 0;
         try {
-            System.out.print("새 제목:");
-            String newTitle = sc.nextLine();
-            if(newTitle.isEmpty()){
-                newTitle = movie.getTitle();
-                // 미 입력시 원상태로
-            }
-            System.out.print("새 상영 시간: ");
-            String newTime = sc.nextLine();
-            if(newTime.isEmpty()){
-                newTime = movie.getShowtime();
-                // 미 입력시 원상태로
-            }
-            System.out.print("새 가격: ");
-            String priceInput = sc.nextLine();
-            int newPrice = 0;
-            try {
-                if(priceInput.trim().isEmpty()){
-                    //공란을 입력시 기존 가격 유지
-                    newPrice = movie.getPrice();
-                }
-                else {
-                    newPrice = Integer.parseInt(priceInput);
-                }
-            }
-            System.out.print("새 좌석 수: ");
-            String seatInput = sc.nextLine();
-            int newSeats = 0;
-            try {
-                if (seatInput.trim().isEmpty()) {
-                    // 공란 입력 시 기존 좌석 수 유지
-                    newSeats = movie.getTheater().getAvailableSeats();
-                }
-                else {
-                    newSeats = Integer.parseInt(seatInput);
-                }
-
-                if(newSeats == 0){
-                    newSeats = movie.getTheater().getAvailableSeats();
-                    //미 입력시 원상태로
-                }
-            }
-
-            catch (Exception e) {
-                System.out.println("잘못된 입력입니다. 좌석 수는 숫자여야 합니다.");
-                return;
-            }
-            catch (Exception e) {
-                System.out.println("잘못된입력입니다. 가격은 숫자여야합니다.");
-            }
-
-             if(priceInput.trim().isEmpty()){
-                //공란을 입력시 기존 가격 유지
+            if (priceInput.trim().isEmpty()) {
+                // 공란을 입력시 기존 가격 유지
                 newPrice = movie.getPrice();
-            }else{
+            } else {
                 newPrice = Integer.parseInt(priceInput);
-
-
             }
 
-        //새로운 Movie 객체로 대체
+        } catch (Exception e) {
+            System.out.println("잘못된입력입니다ㅏ. 가격은 숫자여야합니다.");
+        }
+
+        System.out.print("새 좌석 수: ");
+        String seatInput = sc.nextLine();
+        int newSeats = 0;
+        try {
+            if (seatInput.trim().isEmpty()) {
+                // 공란 입력 시 기존 좌석 수 유지
+                newSeats = movie.getTheater().getAvailableSeats();
+            } else {
+                newSeats = Integer.parseInt(seatInput);
+            }
+
+            if (newSeats == 0) {
+                newSeats = movie.getTheater().getAvailableSeats();
+                // 미 입력시 원상태로
+            }
+        } catch (Exception e) {
+            System.out.println("잘못된 입력입니다. 좌석 수는 숫자여야 합니다.");
+            return;
+        }
+
+        // 새로운 Movie 객체로 대체
         Movie updateMovie = new Movie(newTitle, newTime, newPrice, newSeats);
         movies.remove(movie);
         movies.add(updateMovie);
         System.out.println("영화 정보가 수정되었습니다.");
-
-        } catch (Exception e) {
-            System.out.println("잘못된입력입니다.");
-        }
-
-        System.out.println("현재 정보: " + movie.getTitle() + ", " + movie.getShowtime() + ", " + movie.getPrice() + "원");
-        System.out.println("수정할 정보를 입력하세요. #미 입력 시 기존 정보 유지됩니다. 또한 모든 예매는 취소 됩니다.");
     }
 
     public void setDiscountRate(Scanner sc) {
-        System.out.println("현재 할인율" + discountRate+ "%");
+        System.out.println("현재 할인율" + discountRate + "%");
         System.out.print("할인율(%)을 입력하세요: ");
 
         try {

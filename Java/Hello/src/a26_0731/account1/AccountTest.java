@@ -6,10 +6,11 @@ public class AccountTest {
         Account a = new Account("123-45", 10000);
         Account b = new Account("567-89", 10000);
 
-        while(a.transfer(b, 3000)) {
+        while (a.transfer(b, 3000)) {
             ; // 아무것도 안한다.
-        };
-        
+        }
+        ;
+
         System.out.println(a.toStr());
         System.out.println(b.toStr());
     }
@@ -32,7 +33,7 @@ class Account {
     }
 
     public boolean transfer(Account b, int i) {
-        if(balance < i) {
+        if (balance < i) {
             return false; // 잔액이 송금액보다 작으면 거짓을 리턴
         }
         balance = balance - i; // a의 잔액이 3000 감소

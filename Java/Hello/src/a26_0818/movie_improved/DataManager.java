@@ -87,7 +87,8 @@ public class DataManager {
             int count = 0;
             while ((line = reader.readLine()) != null) {
                 line = line.trim();
-                if (line.isEmpty()) continue;
+                if (line.isEmpty())
+                    continue;
 
                 String[] parts = line.split("\\|");
                 if (parts.length != 2) {
@@ -161,7 +162,8 @@ public class DataManager {
             int count = 0;
             while ((line = reader.readLine()) != null) {
                 line = line.trim();
-                if (line.isEmpty()) continue;
+                if (line.isEmpty())
+                    continue;
 
                 // 예매번호 카운터 처리
                 if (line.startsWith("COUNTER|")) {
@@ -241,7 +243,8 @@ public class DataManager {
             int count = 0;
             while ((line = reader.readLine()) != null) {
                 line = line.trim();
-                if (line.isEmpty()) continue;
+                if (line.isEmpty())
+                    continue;
 
                 String[] parts = line.split("\\|");
                 if (parts.length != 4) {
