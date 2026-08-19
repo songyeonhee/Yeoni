@@ -33,7 +33,7 @@ public class Theater {
   public boolean reserveSeat(int seatNumber) {
     if (seatNumber > 0 && seatNumber <= seats.size() && !seats.get(seatNumber - 1).equals("X")) {
       seats.set(seatNumber - 1, "X");
-      // 좌석예약시 인덱스번호 해당하는 값을 "X" 변경
+      // 좌석 예약 시 인덱스번호 해당하는 값을 "X" 변경
       return true;
     }
     return false;
