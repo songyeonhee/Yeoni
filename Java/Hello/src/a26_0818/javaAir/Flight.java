@@ -14,13 +14,22 @@ public class Flight {
         this.departureTime = departureTime;
         this.price = price;
         this.isInternational = isInternational;
-        this.seats = new ArrayList<>();
+        this.seats = new ArrayList<String>();
+        addSeats();
+    }
+
+    private void addSeats() {
+        for (int i = 0; i < 20; i++) {
+            seats.add(i + 1 + "");
+        }
     }
 
     public void displaySeats() {
-        seats = new ArrayList<>();
-        for (int i = 0; i < 20; i++) {
-            seats.add(toString(i + 1));
+        for (int i = 0; i < seats.size(); i++) {
+            System.out.printf("[%2s]", seats.get(i));
+            if ((i + 1) % 4 == 0) {
+                System.out.println();
+            }
         }
     }
 }
