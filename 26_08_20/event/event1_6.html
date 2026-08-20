@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- addEventListner() -->
+    <button id="btn1">Button 1</button>
+    <button id="btn2">Button 2</button>
+    <button id="btn3">Button 3</button>
+    <script>
+      const btn1 = document.querySelector("#btn1");
+      btn1.addEventListener("click", () => {
+        console.log(event); // 이벤트 객체
+      });
+
+      const btn2 = document.querySelector("#btn2");
+      btn2.addEventListener("click", (e) => {
+        console.log(e.target); // <button id="btn2">클릭</button>
+        //console.log(e.target.innerHTML); // 클릭
+        // console.log(this); // this = button 화살표 함수에서는 쓰지 않는다
+      });
+
+      const btn3 = document.querySelector("#btn3");
+      btn3.addEventListener("click", (e) => {
+        console.log(e.target); // 실제 클릭한 요소
+        console.log(e.currentTarget); // 이벤트가 등록된 요소
+      });
+    </script>
+  </body>
+</html>

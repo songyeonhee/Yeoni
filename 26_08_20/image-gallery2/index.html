@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Gallery</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      ul,
+      li {
+        list-style: none;
+      }
+
+      body {
+        background-color: #eee;
+      }
+
+      #wrap {
+        display: flex;
+        flex-direction: column;
+        width: 640px;
+        margin: 100px auto 0;
+      }
+
+      #nav {
+        display: flex;
+      }
+
+      #nav li a {
+        display: block;
+        border: 2px solid#fff;
+        margin: 0 6px 10px 0;
+        border-radius: 5px;
+      }
+
+      #nav li a.active {
+        border: 2px solid #aaa;
+      }
+
+      #nav li a img {
+        width: 71px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <ul id="nav">
+        <li>
+          <a href="img/lop0.jpg" class="active"
+            ><img src="img/thumb0.jpg" alt="tiger0"
+          /></a>
+        </li>
+        <li>
+          <a href="img/lop1.jpg"><img src="img/thumb1.jpg" alt="tiger1" /></a>
+        </li>
+        <li>
+          <a href="img/lop2.jpg"><img src="img/thumb2.jpg" alt="tiger2" /></a>
+        </li>
+        <li>
+          <a href="img/lop3.jpg"><img src="img/thumb3.jpg" alt="tiger3" /></a>
+        </li>
+        <li>
+          <a href="img/lop4.jpg"><img src="img/thumb4.jpg" alt="tiger4" /></a>
+        </li>
+        <li>
+          <a href="img/lop5.jpg"><img src="img/thumb5.jpg" alt="tiger5" /></a>
+        </li>
+        <li>
+          <a href="img/lop6.jpg"><img src="img/thumb6.jpg" alt="tiger6" /></a>
+        </li>
+        <li>
+          <a href="img/lop7.jpg"><img src="img/thumb7.jpg" alt="tiger7" /></a>
+        </li>
+      </ul>
+      <div id="window"><img src="img/lop0.jpg" alt="" /></div>
+    </div>
+
+    <script>
+      let navLinks = document.querySelectorAll("#nav li a"); // 8개의 전체 a
+      navLinks.forEach((navLink) => {
+        navLink.addEventListener("click", (e) => {
+          e.preventDefault(); // = return false; : a에 발생하는 이벤트를 막아 링크 금지
+
+          let imgUrl = navLink.getAttribute("href"); // a의 주소 값 (클릭하면 보이는 큰 이미지)
+          document.querySelector("#window img").setAttribute("src", imgUrl);
+
+          navLinks.forEach((link) => {
+            link.classList.remove("active"); // a에서 모든 active 클래스 제거
+          });
+
+          navLink.classList.add("active"); // 클릭된 a에 active 클래스 추가
+        });
+      });
+    </script>
+  </body>
+</html>

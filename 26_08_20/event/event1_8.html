@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="parent">
+      <button>Button</button>
+    </div>
+    <script>
+      const parent = document.querySelector("#parent");
+      const child = document.querySelector("button");
+      // 버튼 클릭 시 출력 순서가 자식 클릭 > 부모 클릭
+      // 이벤트 버블링 : 이벤트가 자식 요소에서 부모 요소로 전파되는 현상
+
+      parent.addEventListener("click", () => {
+        console.log("부모 클릭");
+      });
+
+      child.addEventListener("click", () => {
+        console.log("자식 클릭");
+      });
+    </script>
+  </body>
+</html>

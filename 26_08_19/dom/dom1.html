@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      #box2 {
+        background-color: white;
+        width: 150px;
+        height: 150px;
+        border: 1px solid #000;
+      }
+
+      #box2.active {
+        background-color: lavenderblush;
+      }
+
+      #box3 {
+        background-color: white;
+        width: 150px;
+        height: 150px;
+        border: 1px solid #000;
+      }
+
+      #box3.active {
+        background-color: lemonchiffon;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- dom 웹 페이지를 javaScript가 객체(object)형태로 다룰 수 있도록 만든 모델 -->
+    <!-- html을 javaScript로 읽고, 수정, 삭제, 추가 할 수 있게 해주는 기능 -->
+    <!-- dom의 시작은 항상 Document로 시작 -->
+
+    <h1 id="title">안녕하세요</h1>
+    <p class="text">첫 번째 문장</p>
+    <p class="text">두 번째 문장</p>
+    <button onclick="hello()">클릭</button>
+    <button id="btn">클릭</button>
+    <img src="imgs/cat1.jpg" alt="cat" id="photo" />
+    <ul id="list"></ul>
+
+    <br />
+    <button id="btn2">배경 변경</button>
+    <div id="box2">박스</div>
+
+    <br />
+    <button id="btn3">배경 변경</button>
+    <div id="box3">박스</div>
+
+    <script>
+      // 브라우저의 html 전체를 볼 수 있음
+      console.log(document);
+
+      // 1. 요소 (Element) - ID 선택
+      let title = document.getElementById("title");
+      console.log(title);
+
+      // 2. 요소 (Element) - Class 선택
+      let texts = document.getElementsByClassName("text");
+      console.log(texts); // HTMLCollection(2)
+
+      // 3. 요소 (Element) - tag 선택
+      let ps = document.getElementsByTagName("h2");
+      console.log(ps); // HTMLCollection > 태그도 중복으로 나올 수 있으므로
+
+      // 가장 많이 쓰이는 방법
+      let title1 = document.querySelector("#title");
+      let p1 = document.querySelector(".text"); // 여러가지 중 첫 번째만 선택
+      let pAll = document.querySelectorAll(".text"); // 해당 class 전체 선택
+      console.log(p1);
+      console.log(pAll);
+
+      // 사용 방법
+      title.innerHTML = "반갑습니다";
+      console.log(title.innerHTML);
+
+      // css 변경
+      title.style.color = "white";
+      title.style.backgroundColor = "lavender";
+
+      // 속성(Attribute) 변경
+      let photo1 = document.querySelector("#photo");
+      photo1.src = "imgs/cat2.jpg";
+
+      // 이벤트 (event)
+      function hello() {
+        alert("안녕하세요");
+      }
+
+      // 최근 주로 사용하는 이벤트 event
+      let btn = document.querySelector("#btn");
+      btn.addEventListener("click", function () {
+        alert("클릭되었습니다.");
+      });
+
+      // 요소 추가
+      let li = document.createElement("li"); // 변수 li에 li 요소 생성하여 할당
+      li.innerHTML = "사과"; // li에 내용 추가
+      document.querySelector("#list").appendChild(li);
+
+      // 요소 삭제
+      let li1 = document.querySelector("li");
+      li1.remove();
+
+      // Class 추가
+      let box2 = document.querySelector("#box2");
+      let btn2 = document.querySelector("#btn2");
+      btn2.addEventListener("click", function () {
+        if (box2.classList.contains("active")) {
+          // active 클래스가 있으면
+          box2.classList.remove("active"); // active 클래스 삭제
+        } else {
+          // active 클래스 없으면
+          box2.classList.add("active"); // active 클래스 삽입
+        }
+      });
+
+      let box3 = document.querySelector("#box3");
+      let btn3 = document.querySelector("#btn3");
+      btn3.addEventListener("click", function () {
+        box3.classList.toggle("active");
+      });
+    </script>
+  </body>
+</html>
