@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- addEventListner() -->
+    <button class="btn">치즈</button>
+    <button class="btn">고등어</button>
+    <button class="btn">턱시도</button>
+    <script>
+      const btns = document.querySelectorAll(".btn");
+
+      btns.forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+          alert(e.target.innerHTML);
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul id="title">
+      안녕하세요
+    </ul>
+
+    <button onclick="addItem()">변경</button>
+
+    <script>
+      let title = document.querySelector("#title");
+      let btn = document.querySelector("#btn");
+
+      function addItem() {
+        let li = document.createElement("li");
+        li.innerHTML = "고양이";
+        title.appendChild(li);
+      }
+    </script>
+  </body>
+</html>

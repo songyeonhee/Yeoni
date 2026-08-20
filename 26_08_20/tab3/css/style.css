@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Chiron+GoRound+TC:wght@200..900&family=Single+Day&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Chiron GoRound TC", sans-serif;
+}
+
+.tab-menu {
+  display: flex;
+  gap: 70px;
+  margin-bottom: 20px;
+}
+
+.tab-menu img {
+  display: block;
+}
+
+.tab-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 130px;
+  height: 40px;
+  font-size: 20px;
+  cursor: pointer;
+  border-bottom: 2px solid #ddd;
+}
+
+.main-content {
+  height: 700px;
+}
+
+.content-box {
+  display: flex;
+}
+
+.img-box {
+  margin: 0 35px 0 20px;
+  width: 300px;
+  height: 450px;
+}
+
+.img1 {
+  background: url(../imgs/selfiCat.jpg) center / cover no-repeat;
+}
+
+.content-box .text-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.content-box .text-box h2 {
+  margin: 20px 0;
+}
