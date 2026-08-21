@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/fade.css" />
+  </head>
+  <body>
+    <div id="slider-container">
+      <div class="slider">
+        <div class="slide">
+          <img src="img/slide1.jpg" alt="" />
+        </div>
+        <div class="slide">
+          <img src="img/slide2.jpg" alt="" />
+        </div>
+        <div class="slide">
+          <img src="img/slide3.jpg" alt="" />
+        </div>
+      </div>
+      <div class="pager">
+        <!-- span은 인라인 요소 -->
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+      </div>
+    </div>
+
+    <script>
+      let slideIndex = 1;
+      const currentSlide = (a) => {
+        showSlides((slideIndex = a));
+      };
+
+      const plusSlides = (a) => {
+        showSlides((slideIndex += a));
+      };
+
+      setInterval(() => {
+        plusSlides(1);
+      }, 3000);
+
+      const showSlides = (a) => {
+        const slides = document.querySelectorAll(".slide");
+        const dots = document.querySelectorAll(".dot");
+
+        if (a > slides.length) {
+          slideIndex = 1;
+        }
+        slides.forEach((slide) => slide.classList.remove("on"));
+        dots.forEach((dot) => dot.classList.remove("active"));
+
+        slides[slideIndex - 1].classList.add("on");
+        // 슬라이드 인덱스 1, 2, 3
+        // let slideIndex = 1; 로 선언하여 -1
+        // slides[0] > 첫 번째 사진
+        // slides[1] > 두 번째 사진
+        // slides[2] > 세 번째 사진
+
+        dots[slideIndex - 1].classList.add("active");
+      };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      .wrap {
+        width: 50%;
+        margin: 30px auto 0;
+      }
+
+      h2 {
+        margin-bottom: 20px;
+      }
+
+      .accordion {
+        border: 1px solid #ccc;
+        margin-bottom: 5px;
+        cursor: pointer;
+        padding: 10px;
+        background: #f5f5f5;
+        margin-bottom: 8px;
+      }
+
+      .panel {
+        display: none;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-top: none;
+      }
+
+      .accordion.active {
+        background: #007bff;
+        color: white;
+        border: 1px solid #aaa;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <h2>아코디언 메뉴 예제</h2>
+      <div class="accordion">🍎 사과</div>
+      <div class="panel">사과는 빨갛고 달콤합니다.</div>
+      <div class="accordion">🍌 바나나</div>
+      <div class="panel">바나나는 노랗고 길쭉합니다.</div>
+      <div class="accordion">🍇 포도</div>
+      <div class="panel">포도는 보라색이고 송이로 열립니다.</div>
+    </div>
+    <script>
+      const accordions = document.querySelectorAll(".accordion");
+      accordions.forEach((accordion) => {
+        // (accordion) : 현재 클릭한 accordion
+        accordion.addEventListener("click", () => {
+          // 모든 아코디언에 클릭 이벤트를 등록
+          accordions.forEach((a) => {
+            // accordions을 돌면서 .accordion의 active 클래스 제거
+            a.classList.remove("active");
+            a.nextElementSibling.style.display = "none";
+            // accordion 다음에 오는 panel을 안보이게함
+          });
+          accordion.classList.add("active");
+          accordion.nextElementSibling.style.display = "block";
+        });
+      });
+    </script>
+  </body>
+</html>
+
+<!--
+프로그램 시작
+
+accordion1
+accordion2
+accordion3
+
+        │
+        ▼
+첫 번째 forEach
+
+┌──────────────┐
+│클릭 이벤트 등록│
+└──────────────┘
+
+=========================
+
+사용자가 메뉴2 클릭
+
+        │
+        ▼
+
+두 번째 forEach
+
+┌─────────────────┐
+│모든 메뉴 닫기     │
+└─────────────────┘
+
+        │
+        ▼
+
+현재 클릭한 메뉴만 열기
+-->
