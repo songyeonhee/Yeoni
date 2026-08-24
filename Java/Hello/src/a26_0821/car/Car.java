@@ -19,10 +19,6 @@ public class Car {
     return carNumber;
   }
 
-  // public void setCarNumber(String carNumber) {
-  // this.carNumber = carNumber;
-  // }
-
   public String getCarType() {
     return carType;
   }
