@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      li {
+        list-style: none;
+        float: left;
+        width: 80px;
+      }
+
+      li img {
+        width: 80px;
+        height: 54px;
+        display: block;
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      #banner_wrap {
+        width: 260px;
+        height: 120px;
+        padding: 10px 20px;
+        margin: 0 auto;
+        border: 1px solid #aaa;
+      }
+
+      #banner {
+        width: 800px;
+        height: 54px;
+      }
+
+      #frame {
+        position: relative;
+        width: 232px;
+        height: 54px;
+        margin: 10px auto;
+        border: 1px solid blue;
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>롤링 슬라이더 배너 만들기</h2>
+    <div id="banner_wrap">
+      <div id="frame">
+        <ul id="banner">
+          <li>
+            <a href="#"><img src="images/pic_1.jpg" alt="" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="images/pic_2.jpg" alt="" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="images/pic_3.jpg" alt="" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="images/pic_4.jpg" alt="" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="images/pic_5.jpg" alt="" /></a>
+          </li>
+        </ul>
+      </div>
+      <p>
+        <a href="#" class="prev"><img src="images/prev_btn.png" alt="" /></a>
+        <a href="#" class="next"><img src="images/next_btn.png" alt="" /></a>
+      </p>
+    </div>
+
+    <script>
+      let list = document.getElementById("banner"); // li를 감싸는 너비 800px
+      let listLi = document.querySelectorAll("#banner li"); // 사진을 감싸는 li
+      let total = listLi.length; // 5개
+      let liWidth = 80;
+      let num = 0;
+
+      for (let i = 0; i < 3; i++) {
+        let copyObj = listLi[i].cloneNode(true);
+        list.append(copyObj);
+      }
+
+      let next = document.querySelector(".next");
+      let prev = document.querySelector(".prev");
+
+      next.addEventListener("click", (e) => {
+        e.preventDefault();
+
+        if (num === 5) {
+          num = 0;
+          list.style.transition = "none";
+          list.style.marginLeft = 0;
+        }
+
+        // setInterval > 계속 실행
+        // setTimeout > 한 번만 실행
+        // 처음 위치로 이동했다가 다시 움직이는 과정을 보여주어야하는데 그럴 틈이 없음
+        // marginLeft = 0 > -80으로 변하는 두 작업이 거의 한 번에 변경
+        setTimeout(() => {
+          num++;
+          list.style.transition = "margin-left 0.5s"; // 0으로 돌아갈 시간을 벌어줌
+          list.style.marginLeft = -liWidth * num + "px";
+        }, 50);
+      });
+
+      const autoPlay = () => {
+        if (num === 5) {
+          num = 0;
+          list.style.transition = "none";
+          list.style.marginLeft = 0;
+        }
+
+        // setInterval > 계속 실행
+        // setTimeout > 한 번만 실행
+        // 처음 위치로 이동했다가 다시 움직이는 과정을 보여주어야하는데 그럴 틈이 없음
+        // marginLeft = 0 > -80으로 변하는 두 작업이 거의 한 번에 변경
+        setTimeout(() => {
+          num++;
+          list.style.transition = "margin-left 0.5s"; // 0으로 돌아갈 시간을 벌어줌
+          list.style.marginLeft = -liWidth * num + "px";
+        }, 50);
+      };
+
+      setInterval(autoPlay, 3000);
+    </script>
+  </body>
+</html>

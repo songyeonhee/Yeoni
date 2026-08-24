@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      li {
+        list-style: none;
+        float: left;
+        width: 600px;
+        /* 여백 고려해서 80 - 이미지 한장은 72px */
+      }
+      h1 {
+        text-align: center;
+      }
+      #banner_wrap {
+        width: 600px;
+        height: 255px;
+        margin: 0 auto;
+        border: 1px solid #aaa;
+        position: relative;
+      }
+
+      #frame {
+        overflow: hidden;
+
+        width: 600px;
+        height: 255px;
+      }
+
+      #banner {
+        width: 2400px;
+        height: 255px;
+      }
+
+      .prev {
+        position: absolute;
+        top: 40%;
+        left: 20px;
+      }
+
+      .next {
+        position: absolute;
+        top: 40%;
+        right: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>롤링 슬라이더 배너만들기</h1>
+    <div id="banner_wrap">
+      <div id="frame">
+        <ul id="banner">
+          <li>
+            <a href="#"><img src="images/car1.jpg" alt="" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="images/car2.jpg" alt="" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="images/car3.jpg" alt="" /></a>
+          </li>
+        </ul>
+      </div>
+      <p>
+        <a href="#" class="prev"><img src="images/prev_btn.png" alt="" /></a>
+        <a href="#" class="next"><img src="images/next_btn.png" alt="" /></a>
+      </p>
+    </div>
+  </body>
+</html>
+<script>
+  let banner = document.querySelector("#banner");
+  let slides = document.querySelectorAll("#banner li");
+  let slideCount = slides.length;
+  let slideWidth = 600;
+  let currentIndex = 0;
+
+  let prevBtn = document.querySelector(".prev");
+  let nextBtn = document.querySelector(".next");
+
+  let slideClone1 = slides[0].cloneNode(true);
+  banner.append(slideClone1);
+
+  const showNextSlide = () => {
+    if (currentIndex === slideCount) {
+      currentIndex = 0;
+      banner.style.transition = "none";
+      banner.style.marginLeft = 0;
+    }
+
+    setTimeout(() => {
+      currentIndex++;
+      banner.style.transition = "margin-left 0.5s";
+      banner.style.marginLeft = -slideWidth * currentIndex + "px";
+    }, 50);
+  };
+
+  nextBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    showNextSlide();
+  });
+</script>
