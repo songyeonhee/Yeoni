@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <script src="https://code.jquery.com/jquery-4.0.0.js"></script>
+
+  <script>
+    $(function () {
+      $("#list1 li:even").css("background", "gray");
+      $("#list1 li:odd").css("background", "yellow");
+    });
+  </script>
+  <body>
+    <ul id="list1">
+      <li>index 0</li>
+      <li>index 1</li>
+      <li>index 2</li>
+      <li>index 3</li>
+      <li>index 4</li>
+    </ul>
+  </body>
+</html>
