@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-4.0.0.js"></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      ul {
+        list-style: none;
+      }
+
+      body {
+        overflow-x: hidden;
+      }
+
+      header {
+        width: 100%;
+        height: 70px;
+        position: relative;
+        background-color: lightblue;
+      }
+
+      header h1 {
+        line-height: 70px;
+        height: 70px;
+        text-align: center;
+      }
+
+      header p.ham {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        top: 10px;
+        right: 10px;
+        border: 1px solid #333;
+        text-indent: -9999px;
+        background: url(images/ham.png) no-repeat 50% 50%;
+        cursor: pointer;
+      }
+
+      header p.ham.on {
+        background: url(images/bar.png) no-repeat 50% 50%;
+      }
+
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+
+      nav {
+        display: flex;
+        justify-content: end;
+      }
+
+      .m_menu {
+        width: 200px;
+        text-align-last: center;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .m_menu > li > a {
+        display: block;
+        height: 36px;
+        background-color: #390;
+        line-height: 36px;
+        border-top: 1px dotted #fff;
+        color: #fff;
+      }
+      .m_menu .sub li {
+        background-color: #cf9;
+      }
+
+      .m_menu .sub li a {
+        display: block;
+        line-height: 36px;
+        height: 36px;
+        color: #222;
+      }
+
+      .m_menu .sub li:hover {
+        background-color: #cf0;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>The Joeun</h1>
+
+      <nav>
+        <p class="ham">메뉴바</p>
+        <ul class="m_menu">
+          <li>
+            <a href="#">회사소개</a>
+            <ul class="sub">
+              <li><a href="#">submenu1</a></li>
+              <li><a href="#">submenu2</a></li>
+              <li><a href="#">submenu3</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">제품소개</a>
+            <ul class="sub">
+              <li><a href="#">submenu1</a></li>
+              <li><a href="#">submenu2</a></li>
+              <li><a href="#">submenu3</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">커뮤니티</a>
+            <ul class="sub">
+              <li><a href="#">submenu1</a></li>
+              <li><a href="#">submenu2</a></li>
+              <li><a href="#">submenu3</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">다운로드</a>
+            <ul class="sub">
+              <li><a href="#">submenu1</a></li>
+              <li><a href="#">submenu2</a></li>
+              <li><a href="#">submenu3</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
+  </body>
+</html>
+
+<script>
+  $(function () {
+    $(".m_menu").hide();
+    $(".ham").click(function (e) {
+      e.preventDefault();
+
+      let menuStatus = $(this).next(".m_menu").css("display");
+      // console.log(hamStatus);
+      if (menuStatus == "none") {
+        $(".m_menu").slideDown();
+      }
+    });
+
+    $(".sub").hide();
+    $(".m_menu > li > a").click(function (e) {
+      e.preventDefault();
+
+      let subStatus = $(this).next(".sub").css("display");
+      // console.log(subStatus);
+
+      if (subStatus == "none") {
+        $(".sub").slideUp();
+        $(this).next(".sub").slideDown();
+      } else {
+        $(".sub").slideUp();
+      }
+    });
+  });
+</script>
