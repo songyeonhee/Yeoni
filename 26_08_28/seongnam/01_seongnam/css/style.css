@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  width: 1280px;
+  margin: 0 auto;
+  height: 800px;
+  border: 1px solid #333;
+}
+
+.left-pop-slide {
+  width: 718px;
+  height: 385px;
+  position: relative;
+}
+
+.slide-number {
+  position: absolute;
+  bottom: 20px;
+  right: 65px;
+  padding: 6px 13px;
+  border: 1px solid #aaa;
+  border-radius: 25px;
+  background-color: #fff;
+  font-weight: bold;
+}
+
+.pause {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 36px;
+  height: 36px;
+  border: 1px solid #aaa;
+  background: #fff url(../imgs/ico_play.svg) no-repeat center;
+  border-radius: 50%;
+}
+
+.pause.on {
+  background: #fff url(../imgs/ico_stop.svg) no-repeat center;
+}
+
+.arrow a {
+  position: absolute;
+  top: 50%;
+  margin-top: -18px;
+  width: 36px;
+  height: 36px;
+  border: 1px solid #aaa;
+  border-radius: 50%;
+}
+
+.arrow .prev-btn {
+  left: -18px;
+  background: #fff url(../imgs/ico_arrow_left.svg) no-repeat center;
+}
+
+.arrow .next-btn {
+  right: -18px;
+  background: #fff url(../imgs/ico_arrow_right.svg) no-repeat center;
+}
+
+/* 과제 영역 */
+.right-pop-slide {
+  width: 529px;
+  height: 280px;
+  border-radius: 30px;
+  overflow: hidden;
+}

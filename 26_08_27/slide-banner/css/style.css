@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-size: 12px;
+  font-family: Dotum;
+  color: #74767a;
+  line-height: 120%;
+}
+
+a {
+  color: #74767a;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  border: none;
+  vertical-align: middle;
+}
+
+#brand-visual {
+  position: relative;
+  width: 100%;
+  min-width: 1000px;
+  height: 500px;
+  background-color: #8c908c;
+  /* overflow: hidden; */
+}
+
+#brand-visual ul li {
+  position: absolute;
+  width: 100%;
+  height: 500px;
+}
+
+#brand-visual .visual-0 {
+  left: 0;
+  background: url(../img/0.png) no-repeat 50% 0;
+}
+
+#brand-visual .visual-1 {
+  left: 100%;
+  background: url(../img/1.png) no-repeat 50% 0;
+}
+
+#brand-visual .visual-2 {
+  left: 200%;
+  background: url(../img/2.png) no-repeat 50% 0;
+}
+
+#button-list {
+  display: flex;
+  position: absolute;
+  top: 470px;
+  right: 10px;
+}
+
+#button-list li {
+  width: 14px;
+  height: 15px;
+  /* background-color: #ccc; */
+  /* border-radius: 50%; */
+  background: url(../img/btnVisual.png) no-repeat 0 -16px;
+  margin: 0 5px;
+  font-size: 0;
+  /* text-indent: -999px; */
+  cursor: pointer;
+}
+
+#button-list li.on {
+  /* background-color: #333; */
+  /* background: url(../img/btnVisual.png) no-repeat 0 0; */
+  background-position: 0 0;
+}

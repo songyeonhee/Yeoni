@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/jquery.bxslider.css" />
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/jquery.bxslider.js"></script>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      header {
+        width: 100%;
+        max-width: 960px;
+        height: 200px;
+        margin: 0 auto;
+        background-color: lavenderblush;
+      }
+
+      section {
+        width: 100%;
+        max-width: 960px;
+        height: 800px;
+        margin: 0 auto;
+        border: 1px solid red;
+      }
+    </style>
+  </head>
+  <body>
+    <header>헤더</header>
+    <section>
+      <ul class="slider">
+        <li><img src="img/images(1).jpg" alt="사진 1" /></li>
+        <li><img src="img/images(2).jpg" alt="사진 2" /></li>
+        <li><img src="img/images(3).jpg" alt="사진 3" /></li>
+        <li><img src="img/images(4).jpg" alt="사진 4" /></li>
+        <li><img src="img/images(5).jpg" alt="사진 5" /></li>
+      </ul>
+    </section>
+
+    <script>
+      $(function () {
+        $(".slider").bxSlider({
+          auto: true, // 자동 슬라이드
+          moveSlides: 1, // 한 번에 슬라이드되는 사진 수
+          minSlides: 1, // 화면에 표시할 최소 슬라이드의 개수
+          maxSlides: 3, // 화면에 표시할 최대 슬라이드의 개수
+          slideWidth: 305, // 한 개 슬라이드 이미지의 너비
+          slideMargin: 10, // 슬라이드 사이의 여백
+          shrinkItems: true,
+          // 화면에 맞게 슬라이드 너비를 줄여 여러 슬라이드 표시
+          // 공간이 부족하면 슬라이드 크기를 줄여서 맞춘다
+        });
+      });
+    </script>
+  </body>
+</html>
