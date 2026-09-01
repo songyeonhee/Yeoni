@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/jquery.bxslider.css" />
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/jquery.bxslider.js"></script>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      ul {
+        list-style: none;
+      }
+
+      .container {
+        width: 1200px;
+        margin: 0 auto;
+      }
+
+      header {
+        height: 100px;
+        background-color: lavenderblush;
+      }
+
+      .img_slider {
+        height: 300px;
+
+        display: flex;
+      }
+
+      .content {
+        height: 200px;
+        display: flex;
+      }
+
+      .img1 {
+        background: url(img/slide1.jpg) no-repeat 0 0 / cover;
+      }
+
+      .img2 {
+        background: url(img/slide2.jpg) no-repeat 0 0 / cover;
+      }
+
+      .img3 {
+        background: url(img/slide3.jpg) no-repeat 0 0 / cover;
+      }
+
+      .con1 {
+        width: 400px;
+        background-color: olive;
+      }
+
+      .con2 {
+        width: 400px;
+        background-color: beige;
+      }
+
+      .con3 {
+        width: 400px;
+        background-color: brown;
+      }
+
+      footer {
+        height: 100px;
+        background-color: lavender;
+      }
+
+      .tab-menu {
+        display: flex;
+        gap: 20px;
+      }
+
+      .tab-menu li.on {
+        background-color: chocolate;
+      }
+
+      .tab-list div {
+        display: none;
+      }
+
+      .tab-list div.active {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <!-- 1200 * 100 -->
+      </header>
+      <div class="img_slider">
+        <div class="img1"></div>
+        <div class="img2"></div>
+        <div class="img3"></div>
+        <!-- 1200 * 300 -->
+      </div>
+      <div class="content">
+        <div class="con1">
+          <div class="tab">
+            <ul class="tab-menu">
+              <li class="on">1번</li>
+              <li>2번</li>
+              <li>3번</li>
+            </ul>
+            <div class="tab-list">
+              <div class="active">🥨🥨🥨</div>
+
+              <div>🍦🍦🍦</div>
+
+              <div>🍮🍮🍮</div>
+            </div>
+          </div>
+        </div>
+        <div class="con2"></div>
+        <div class="con3"></div>
+        <!-- (400 * 200) * 3 -->
+      </div>
+
+      <footer></footer>
+    </div>
+
+    <script>
+      $(function () {
+        $(".img_slider").bxSlider({
+          auto: true,
+          pager: false,
+        });
+
+        $(".tab-menu li").on("click", function () {
+          let clickIndex = $(this).index();
+
+          $(".tab-menu li").removeClass("on");
+          $(".tab-menu li").eq(clickIndex).addClass("on");
+
+          $(".tab-list div").removeClass("active");
+          $(".tab-list div").eq(clickIndex).addClass("active");
+        });
+      });
+    </script>
+  </body>
+</html>

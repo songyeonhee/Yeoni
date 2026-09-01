@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    <script src="js/jquery.cookie.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/main.js"></script>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      ul {
+        list-style: none;
+      }
+
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+
+      .s-top {
+        /* h1은 블럭 요소이나 position: absolute, fixed; 사용 시 인라인 요소로 취급됨 */
+        position: fixed;
+        right: 50px;
+        bottom: 50px;
+        z-index: 11;
+        background-color: #fff;
+      }
+
+      #nav {
+        position: absolute;
+        top: 50px;
+        width: 100%;
+        height: 50px;
+        background-color: rgba(255, 255, 255, 0.5);
+        z-index: 10;
+      }
+
+      #nav.fixed {
+        background-color: rgba(255, 255, 255, 0.5);
+        position: fixed;
+        top: 0;
+      }
+
+      #nav ul {
+        display: flex;
+        margin: 0 auto;
+        width: 1000px;
+      }
+
+      #nav ul li a {
+        display: block;
+        width: 200px;
+        height: 50px;
+        line-height: 50px;
+        font-weight: bold;
+        text-align: center;
+        text-shadow: 1px 1px 1px rgb(51, 51, 51, 0.7);
+      }
+
+      #nav ul li.on a {
+        color: orange;
+      }
+
+      section {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+      }
+
+      #section1 {
+        background: url(img/b1.jpg) 50% 50% / cover;
+      }
+
+      #section2 {
+        background: url(img/b2.jpg) 50% 50% / cover;
+      }
+
+      #section3 {
+        background: url(img/b3.jpg) 50% 50% / cover;
+      }
+
+      #section4 {
+        background: url(img/b4.jpg) 50% 50% / cover;
+      }
+
+      #section5 {
+        background: url(img/b5.jpg) 50% 50% / cover;
+      }
+
+      #float-div {
+        width: 70px;
+        height: 250px;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding-top: 10px;
+        position: absolute;
+        right: 50px;
+        top: 250px;
+      }
+
+      #float-div ul li {
+        width: 25px;
+        height: 25px;
+        border-radius: 13px;
+        background-color: #fff;
+        margin-left: 20px;
+        margin-top: 20px;
+        cursor: pointer;
+      }
+
+      #float-div li.on {
+        background-color: orange;
+      }
+
+      #pop-up {
+        width: 301px;
+        height: 351px;
+        position: absolute;
+        top: 210px;
+        left: 50px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+      }
+
+      #notice-wrap {
+        width: 301px;
+        position: absolute;
+        top: 210px;
+        left: 400px;
+        box-shadow: 0 0 8px #000;
+        font-size: 12px;
+        z-index: 20;
+      }
+
+      #notice-wrap img {
+        float: left;
+      }
+
+      .closeWrap {
+        background-color: #000;
+        color: #fff;
+        text-align: right;
+        padding: 5px 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="s-top">0000</h1>
+    <nav id="nav">
+      <ul>
+        <li class="on"><a href="#">MainMenu1</a></li>
+        <li><a href="#">MainMenu2</a></li>
+        <li><a href="#">MainMenu3</a></li>
+        <li><a href="#">MainMenu4</a></li>
+        <li><a href="#">MainMenu5</a></li>
+      </ul>
+    </nav>
+    <div id="wrap">
+      <section id="section1"></section>
+      <section id="section2"></section>
+      <section id="section3"></section>
+      <section id="section4"></section>
+      <section id="section5"></section>
+    </div>
+    <div id="float-div">
+      <ul>
+        <li class="on">
+          <span id="btn1"></span>
+        </li>
+        <li><span id="btn2"></span></li>
+        <li><span id="btn3"></span></li>
+        <li><span id="btn4"></span></li>
+        <li><span id="btn5"></span></li>
+      </ul>
+    </div>
+    <div id="pop-up">
+      <img src="images2/popup.jpg" alt="" usemap="#pop" />
+      <map name="pop" id="pop">
+        <area
+          shape="rect"
+          coords="93,329,215,348"
+          href=""
+          alt="하루동안 이 창 열지 않기"
+        />
+        <area shape="rect" coords="254,329,291,348" href="" alt="창닫기" />
+      </map>
+    </div>
+    <div id="notice-wrap">
+      <img src="images2/popup1.jpg" alt="공지" />
+      <p class="closeWrap">
+        <input type="checkbox" name="expiresChk" id="expiresChk" value="" />
+        <label for="expiresChk">3일 동안 이 창 열지않기</label>
+        <button class="closeBtn">닫기</button>
+      </p>
+    </div>
+  </body>
+</html>
