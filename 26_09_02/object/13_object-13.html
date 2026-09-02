@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 속성 삭제
+      let user1 = {
+        name: "홍길동",
+        age: 25,
+      };
+
+      // 방법 1) 전개 연산자
+      let user2 = { ...user1 };
+
+      // 방법 2) Objext.assign()
+      let user3 = Object.assign({}, user1);
+
+      user2.name = "김철수";
+      console.log(user1.name);
+      console.log(user2.name);
+    </script>
+  </body>
+</html>
