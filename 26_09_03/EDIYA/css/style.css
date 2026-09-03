@@ -1,0 +1,520 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+.cf:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.header_top {
+  width: 100%;
+  min-width: 1905px;
+  height: 50px;
+  background-color: #243c84;
+  position: relative;
+  font-size: 13px;
+  z-index: 100;
+}
+
+.header_top a {
+  color: #fff;
+}
+
+.top_left li {
+  float: left;
+}
+
+.top_left li a,
+.lnb li a {
+  display: block;
+  height: 50px;
+  line-height: 50px;
+  padding: 0 18px;
+  background: url(../images/util_line.gif) 100% 50% no-repeat;
+}
+
+.top_left li.on a {
+  background-color: #fff;
+  color: #1d326c;
+}
+
+.top_left li:nth-child(4) a {
+  background: none;
+}
+
+.lnb li:nth-child(5) a {
+  background: none;
+}
+
+.top_right li {
+  float: left;
+}
+
+.top_sns {
+  padding-top: 14px;
+  margin-right: 13px;
+}
+
+.top_sns li {
+  float: left;
+  margin-right: 5px;
+}
+
+.top_sns li a {
+  display: block;
+  width: 22px;
+  height: 22px;
+  text-indent: -9999px;
+}
+
+.top_sns li:nth-child(1) a {
+  background: url(../images/top_sns01.png) 50% 50% no-repeat;
+}
+
+.top_sns li:nth-child(2) a {
+  background: url(../images/top_sns02.png) 50% 50% no-repeat;
+}
+
+.top_sns li:nth-child(3) a {
+  background: url(../images/top_sns03.png) 50% 50% no-repeat;
+}
+
+.top_sns li:nth-child(4) a {
+  background: url(../images/top_sns04.png) 50% 50% no-repeat;
+}
+
+#ediyaSearchForm {
+  width: 160px;
+  height: 30px;
+  margin-top: 10px;
+  background: #fff;
+  margin-right: 20px;
+}
+
+#ediyaSearch {
+  height: 30px;
+  line-height: 30px;
+  width: 122px;
+  float: left;
+  outline: none;
+  border: none;
+}
+
+#ediyaSearchForm a {
+  float: left;
+  display: block;
+  height: 30px;
+  width: 30px;
+  text-indent: -9999px;
+  background: url(../images/icon_search.gif) no-repeat center;
+}
+
+/*  */
+.header_middle {
+  width: 100%;
+  height: 120px;
+  position: relative;
+  z-index: 101;
+}
+
+.middle_top {
+  width: 100%;
+  height: 70px;
+  position: relative;
+}
+
+.middle_top .logo {
+  position: absolute;
+  width: 202px;
+  height: 22px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.logo img {
+  display: block;
+  width: 100%;
+}
+
+.middle_top .lanquage {
+  position: absolute;
+  top: 21px;
+  right: 50%;
+  margin-right: -520px;
+  /* 중앙 정렬 후 중앙으로부터 -520px 위치에 고정 */
+}
+
+.lanquage img {
+  float: left;
+  margin-right: 5px;
+}
+
+.lanquage span {
+  float: left;
+}
+
+/* 메뉴 */
+nav {
+  width: 100%;
+  height: 50px;
+  position: relative;
+}
+
+nav ul {
+  position: relative;
+  width: 1200px;
+  margin: 0 auto;
+  z-index: 101;
+}
+
+nav > ul > li {
+  position: relative;
+  float: left;
+  width: 14.7%;
+}
+
+nav > ul > li:nth-child(2) {
+  width: 10%;
+}
+
+nav ul li a {
+  display: inline-block;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 5px;
+  font-size: 13px;
+}
+
+nav > ul > li > a {
+  height: 50px;
+  line-height: 50px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+nav ul li ul {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  height: 0;
+  transition: all 0.3s;
+}
+
+nav ul:hover li ul {
+  height: 250px;
+  width: 100%;
+}
+
+.shadow {
+  position: absolute;
+  top: 50px;
+  width: 100%;
+  height: 0;
+  background-color: #fff;
+}
+
+nav ul:hover + .shadow {
+  height: 255px;
+  background-color: #fff;
+}
+
+/* 메인 박스 슬라이더 */
+.main {
+  width: 100%;
+  max-width: 1920px;
+  min-width: 1280px;
+  position: relative;
+}
+
+.section2 {
+  width: 100%;
+  padding: 120px 0;
+  text-align: center;
+}
+
+.section2 video {
+  width: 1180px;
+  height: auto;
+  border-radius: 30px;
+}
+
+.section3 {
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  height: 680px;
+  padding: 100px 10% 30px;
+  background: url(../images/main_beanist_bg.webp) no-repeat center / cover;
+}
+
+.section3 h2 {
+  position: relative;
+  padding-bottom: 50px;
+  margin-bottom: 40px;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 42px;
+  text-align: center;
+}
+
+.section3 h2 strong {
+  color: #90470c;
+}
+.section3 h2 span {
+  color: #3c3c4c;
+  font-weight: 200;
+}
+
+.section3 h2::after {
+  content: "";
+  height: 1px;
+  width: 100px;
+  background-color: #333;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.slide > ul {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.slide.slide-1 > ul {
+  gap: 30px;
+}
+
+.slide > ul > li > img {
+  display: inline-block;
+}
+
+.slide > ul > li > dl {
+  padding-top: 20px;
+}
+
+.slide > ul > li > dl > dt {
+  font-size: 20px;
+  font-weight: 900;
+  color: #693a13;
+}
+
+.slide > ul > li > dl > dd {
+  font-size: 15px;
+  color: #cc8e5d;
+}
+
+/* dot 위치 */
+.slick-dots {
+  bottom: -50px;
+}
+
+/* 기본 dot 제거 */
+.slick-dots li button:before {
+  content: "";
+}
+
+/* 기본 dot 디자인 */
+.slick-dots li button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #d7c2b0;
+  transition: all 0.3s ease;
+}
+
+/* 활성화된 dot */
+.slick-dots li.slick.active button {
+  background: #5c3a21;
+  transform: scale(1.2);
+}
+
+/* hover 효과 */
+.slick-dots li button:hover {
+  background: #8b5e3c;
+}
+
+/* section4 */
+.section4 {
+  box-sizing: border-box;
+  width: 100%;
+  padding-top: 80px;
+  height: 460px;
+  position: relative;
+  background: url(../images/dream_factory_bg.webp) repeat-y;
+}
+
+.section4 .factory_con {
+  width: 1118px;
+  margin: 0 auto;
+}
+
+.section4 h2 {
+  text-indent: -9999px;
+  width: 1036px;
+  height: 87px;
+  background: url(../images/dream_factory_txt.webp);
+}
+
+.section4 h3 {
+  color: #fff;
+  font-weight: 900;
+  font-size: 32px;
+  letter-spacing: -1px;
+}
+
+.section4 .text1 {
+  color: #fff;
+  padding: 20px 0;
+  font-size: 17px;
+}
+
+.section4 .text2 span {
+  color: #fff;
+  font-size: 15px;
+  display: inline-block;
+  padding: 10px 50px;
+  border: 1px solid #fff;
+  margin-right: 15px;
+}
+
+.section4 .text2 span:hover {
+  background: #fff;
+  color: #000;
+  cursor: pointer;
+}
+
+.factory_img {
+  position: absolute;
+  width: 1063px;
+  height: 349px;
+  right: 0;
+  bottom: 0;
+  background: url(../images/dream_factory.webp) no-repeat;
+  background-position: 150px 0;
+}
+
+/* section5 */
+.section5 {
+  text-align: center;
+  color: #fff;
+  box-sizing: border-box;
+  width: 100%;
+  height: 460px;
+  position: relative;
+  background: url(../images/block02_bg.webp) no-repeat center / cover;
+}
+
+.section5 h2 {
+  font-size: 42px;
+  position: relative;
+  /* padding-bottom: 20px;
+  margin-bottom: 40px; */
+  padding-top: 100px;
+}
+
+.section5 h2::after {
+  position: relative;
+  content: "";
+  display: block;
+  width: 100px;
+  height: 1px;
+  background-color: #fff;
+  margin: 0 auto;
+  margin-top: 45px;
+}
+
+.section5 h2 span {
+  font-weight: 200;
+}
+
+.section5 h2 strong {
+  font-weight: 900;
+  letter-spacing: -2px;
+}
+
+.section5 .text1 {
+  font-size: 26px;
+  margin: 43px 0 50px 0;
+  font-weight: 200;
+}
+
+.section5 .text2 span {
+  display: inline-block;
+  font-size: 15px;
+
+  border: 1px solid #fff;
+  font-weight: 500;
+  padding: 10px 60px;
+  letter-spacing: 2px;
+}
+
+.section5 .text2 span:hover {
+  background: #fff;
+  color: #000;
+  cursor: pointer;
+}
+
+/* jquery.bxslider.css 93 ~ 118 */
+/* 화살표 */
+/* .section1 추가, jquery.bxslider.css보다 우선 순위가 생김 */
+.section1 .bx-wrapper .bx-prev {
+  left: 10px;
+  background: url("../images/main_visual_prev.png") no-repeat 0 0;
+}
+.section1 .bx-wrapper .bx-next {
+  right: 10px;
+  background: url("../images/main_visual_next.png") no-repeat 0 0;
+}
+.section1 .bx-wrapper .bx-controls-direction a {
+  width: 24px;
+  height: 45px;
+}
+
+/* jquery.bxslider.css
+38 ~ 41
+64 ~ 65
+76 ~ 80 */
+/* 페이저 */
+
+.section1 .bx-wrapper .bx-pager,
+.section1 .bx-wrapper .bx-controls-auto {
+  bottom: 30px;
+}
+
+.section1 .bx-wrapper .bx-pager.bx-default-pager a {
+  background: #fff;
+}
+
+.section1 .bx-wrapper .bx-pager.bx-default-pager a:hover,
+.section1 .bx-wrapper .bx-pager.bx-default-pager a.active,
+.section1 .bx-wrapper .bx-pager.bx-default-pager a:focus {
+  background: #243c84;
+}
