@@ -18,3 +18,13 @@ $(function () {
     slidesToScroll: 1,
   });
 });
+
+$(function () {
+  $(".pop_up")
+    .find("img")
+    .eq(1)
+    .on("click", function (e) {
+      e.preventDefault();
+      $(".pop_up").fadeOut("fast");
+    });
+});
