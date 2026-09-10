@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i'"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Abel"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Anton"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Poppins:100,300,400,700,900"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  </head>
+  <body>
+    <nav id="nav">
+      <h1>WEB'S</h1>
+    </nav>
+
+    <main>
+      <section class="section s1">
+        <h2 class="sec1_text">
+          <div class="txt1">Parallax Scrolling</div>
+          <div class="txt2">Effects</div>
+        </h2>
+      </section>
+      <!-- //section1 -->
+
+      <section class="section s2">
+        <h2 class="sec_text">
+          <div class="st1 scrolled1">funky foxes love1</div>
+          <div class="st2 scrolled2">technology</div>
+        </h2>
+        <figure class="sec_img">
+          <div class="si1 scrolled3"><img src="img/1.jpg" alt="" /></div>
+        </figure>
+      </section>
+      <!-- //section2 -->
+
+      <section class="section s3">
+        <figure class="sec_img">
+          <div class="si1 scrolled3"><img src="img/2.jpg" alt="" /></div>
+        </figure>
+        <h2 class="sec_text title_left">
+          <div class="st1 scrolled1">funky foxes love1</div>
+          <div class="st2 scrolled2">technology</div>
+        </h2>
+      </section>
+      <!-- //section3 -->
+
+      <section class="section s4">
+        <h2 class="sec_text">
+          <div class="st1 scrolled1">funky foxes love1</div>
+          <div class="st2 scrolled2">technology</div>
+        </h2>
+        <figure class="sec_img">
+          <div class="si1 scrolled3">
+            <img src="img/3.jpg" alt="" />
+          </div>
+        </figure>
+      </section>
+      <!-- //section4 -->
+
+      <section class="section s5">
+        <figure class="sec_img">
+          <div class="si1 scrolled3"><img src="img/4.jpg" alt="" /></div>
+        </figure>
+        <h2 class="sec_text title_left">
+          <div class="st1 scrolled1">funky foxes love1</div>
+          <div class="st2 scrolled2">technology</div>
+        </h2>
+      </section>
+      <!-- //section5 -->
+
+      <section class="section s6">
+        <h2 class="sec_text">
+          <div class="st1 scrolled1">funky foxes love1</div>
+          <div class="st2 scrolled2">technology</div>
+        </h2>
+        <figure class="sec_img">
+          <div class="si1 scrolled3"><img src="img/5.jpg" alt="" /></div>
+        </figure>
+      </section>
+      <!-- //section6 -->
+      <footer></footer>
+    </main>
+
+    <script>
+      $(window).scroll(function () {
+        var sct = $(window).scrollTop();
+        var offset2 = sct - $(".s2").offset().top;
+        var offset3 = sct - $(".s3").offset().top;
+        var offset4 = sct - $(".s4").offset().top;
+        var offset5 = sct - $(".s5").offset().top;
+        var offset6 = sct - $(".s6").offset().top;
+
+        if (sct >= $(".s2").offset().top - $(window).height()) {
+          $(".s2 .sec_img").css({ transform: "translate(" + offset2 + "px)" });
+        }
+
+        if (sct >= $(".s3").offset().top - $(window).height()) {
+          $(".s3 .sec_img").css({ transform: "translate(" + offset3 + "px)" });
+        }
+
+        if (sct >= $(".s4").offset().top - $(window).height()) {
+          $(".s4 .sec_img").css({
+            transform: "translate(0px," + offset4 + "px)",
+          });
+        }
+
+        if (sct >= $(".s5").offset().top - $(window).height()) {
+          $(".s5 .sec_img").css({
+            transform: "translate(0px," + offset5 * 2 + "px)",
+          });
+        }
+
+        if (sct >= $(".s6").offset().top - $(window).height()) {
+          $(".s6 .sec_img").css({
+            transform: "translate(" + offset6 + "px, 0px)",
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
