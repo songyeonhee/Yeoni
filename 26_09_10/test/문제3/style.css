@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+h1 {
+  margin: 30px 0 0 50px;
+  font-size: 25px;
+}
+
+.accordion {
+  width: 200px;
+  margin: 30px 0 0 90px;
+}
+
+.menu {
+  height: 40px;
+  line-height: 40px;
+  font-size: 16px;
+  background-color: mistyrose;
+  color: #941818;
+  font-weight: bold;
+  padding-left: 10px;
+  border: 1px solid saddlebrown;
+}
+
+.menu.active {
+  background-color: #941818;
+  color: #fff;
+}
+
+.submenu {
+  background-color: lavenderblush;
+  padding: 10px;
+  display: none;
+}
+
+.submenu a {
+  display: block;
+  text-decoration: none;
+  color: #c76d6d;
+}

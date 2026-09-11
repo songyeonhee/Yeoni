@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.1.1.js"></script>
     <style>
       * {
         margin: 0;
@@ -18,7 +19,7 @@
       #main {
         background-color: pink;
       }
-
+      
       #about {
         background-color: plum;
         border: 1px solid transparent;
@@ -33,13 +34,13 @@
       .skill {
         width: 100%;
         height: 40px;
-        background: #fff;
+        background-color: #fff;
         margin-bottom: 10px;
         position: relative;
         line-height: 40px;
       }
 
-      .skill_m {
+      .skill_n {
         position: absolute;
         z-index: 20;
         left: 20px;
@@ -49,7 +50,7 @@
         position: absolute;
         width: 0%;
         height: 40px;
-        background: orange;
+        background-color: orange;
         z-index: 10;
       }
 
@@ -67,8 +68,8 @@
 
         $(window).scroll(function () {
           var sct = $(window).scrollTop();
+          console.log(sct);
           var off = $("#about").offset().top;
-
           if (sct >= off - 300) {
             count2();
           }
@@ -76,14 +77,14 @@
 
         function count2() {
           if (onetime == 0) {
-            $(".skills_box > div").each(function () {
+            $(".skills_box > div").each(function (i) {
               var pnum = $(this).find(".skill_p");
-              var pdata = pnum.text();
-              var chartbg = $(this).find(".skill_bg");
-              $({ pecent: 0 })
+              var pdata = pnum.text(); //.skill_p 숫자를 pdata
+              var chartbg = $(this).find(".skill_bg"); //그래프
+              $({ percent: 0 })
                 .delay(i * 300)
                 .animate(
-                  { pecent: pdate },
+                  { percent: pdata },
                   {
                     duration: 3000,
                     progress: function () {
@@ -95,6 +96,7 @@
                 );
             });
           }
+          onetime = 1;
         }
       });
     </script>
@@ -105,7 +107,7 @@
       <div class="section" id="about">
         <div class="skills_box">
           <div class="skill">
-            <div class="skill_n">HTML:5</div>
+            <div class="skill_n">HTML5</div>
             <div class="skill_bg"></div>
             <div class="skill_p">85</div>
           </div>
