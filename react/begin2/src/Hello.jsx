@@ -1,0 +1,7 @@
+function Hello(props) {
+  return (
+    <div style={{ color: props.color }}>안녕하세요 여니님 {props.name}</div>
+  );
+}
+
+export default Hello;
