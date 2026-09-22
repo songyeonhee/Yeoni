@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+  <body>
+    <header class="container-fluid bg-success text-white">
+      <div class="container p-4 d-flex justify-content-between">
+        <h1 class="h4 mb-0"><i class="bi bi-bootstrap me-2"></i>BOOT LAYOUT</h1>
+        <div>
+          <span>Header·Nav·Grid·Card·Footer</span>
+        </div>
+      </div>
+    </header>
+    <nav class="navbar navbar-expand-sm bg-warning-subtle container-fluid">
+      <div class="container">
+        <div class="collapse navbar-collapse">
+          <ul class="navbar-nav me-auto p-2">
+            <li class="nav-item">
+              <a class="nav-link text-black active" aria-current="page" href="#"
+                >MySite</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-black" href="#">홈</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-body-secondary" href="#">카드</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-body-secondary" aria-disabled="true"
+                >소개</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-body-secondary" aria-disabled="true"
+                >문의</a
+              >
+            </li>
+          </ul>
+        </div>
+        <form class="d-flex">
+          <input class="form-control" type="text" placeholder="검색" />
+          <button class="btn btn-light" type="button">🔍</button>
+        </form>
+      </div>
+    </nav>
+    <div class="container-fluid">
+      <div class="container">
+        <div class="text-center my-5">
+          <h2>Bootstrap Grid + Card</h2>
+          <p>
+            <span class="text-danger">row</span> +
+            <span class="text-danger">col-md-4</span>로 카드 3개를 배치합니다.
+          </p>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card text-center">
+              <span class="fs-1">💻</span>
+              <div class="card-body">
+                <h5 class="card-title">웹 개발</h5>
+                <p class="card-text">
+                  HTML, CSS, Bootstrap으로 반응형 레이아웃을 구성합니다.
+                </p>
+                <a href="#" class="btn btn-primary">자세히 보기</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card text-center">
+              <span class="fs-1">📱</span>
+              <div class="card-body">
+                <h5 class="card-title">반응형</h5>
+                <p class="card-text">
+                  모바일에서는 1열, 태블릿 이상에서는 3열로 자동 배치됩니다.
+                </p>
+                <a href="#" class="btn btn-primary">자세히 보기</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card text-center">
+              <span class="fs-1">🌐</span>
+              <div class="card-body">
+                <h5 class="card-title">그리드</h5>
+                <p class="card-text">
+                  Bootstrap 12칸 그리드로 화면을 균등하게 나눕니다.
+                </p>
+                <a href="#" class="btn btn-primary">자세히 보기</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer
+      class="container-fluid bg-success text-white position-absolute bottom-0 p-3"
+    >
+      <div class="container d-flex justify-content-between">
+        <p>&copy; 2026 BOOT LAYOUT ㅡ Bootstrap 수업용</p>
+        <p>이용약관 문의</p>
+      </div>
+    </footer>
+  </body>
+</html>
