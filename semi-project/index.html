@@ -10,7 +10,9 @@
     <!-- 헤더 -->
     <header>
       <div class="header-top">
-        <span> Login </span> <span>|</span> <span>Sign Up</span>
+        <div class="container h-top-section">
+          <span> Login </span> <span>|</span> <span>Sign Up</span>
+        </div>
       </div>
       <div class="container">
         <div class="header-middle">
@@ -19,9 +21,12 @@
             <img src="assets/logo-text.png" alt="" />
           </div>
           <div class="search-bar">
-            <!-- 아이콘 넣고, css 적용하기 -->
-            <input type="text" name="" value="" placeholder="Search" />
-            <img src="assets/icon-search-6328608.png" alt="" />
+            <form>
+              <input type="text" name="" value="" placeholder="Search" />
+              <button class="search-btn" type="submit">
+                <img src="assets/icon-search-6328608.png" alt="" />
+              </button>
+            </form>
           </div>
         </div>
       </div>
