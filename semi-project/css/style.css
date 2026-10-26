@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Noto+Sans+KR:wght@100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Instrument Sans", sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 15px;
+}
+
+/* 헤더 */
+header {
+  width: 100%;
+}
+
+.header-top {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 30px;
+  gap: 10px;
+  background: #ebebeb;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.header-middle {
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img:nth-child(1) {
+  width: 56px;
+  height: 53px;
+}
+
+.logo img:nth-child(2) {
+  width: 159px;
+  height: 51px;
+}
+
+.search-bar input {
+  width: 250px;
+  height: 40px;
+  border: 1px solid #d9d9d9;
+  border-radius: 20px;
+  padding-left: 17px;
+}
+
+.search-bar input::placeholder {
+  font-family: "Instrument Sans", sans-serif;
+  color: #ccc;
+  font-size: 15px;
+}
+
+.search-bar img {
+  width: 20px;
+  height: 20px;
+}
+
+.header-bottom {
+  background: #ebebeb;
+  height: 50px;
+}
+
+/* 내비 메뉴 */
+ul li a {
+  display: block;
+}
+
+nav {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 25px;
+}
+
+.main-menu li a {
+  font-size: 1.6rem;
+  color: #333;
+  font-weight: 600;
+  border-bottom: 1px solid #c7c7c7;
+  padding: 0 0 6px 5px;
+  margin-bottom: 10px;
+}
+
+.sub-menu {
+  display: flex;
+  flex-direction: column;
+}
+
+.sub-menu li a {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  padding-left: 15px;
+  font-size: 19px;
+  color: #777;
+  font-weight: 400;
+}
+
+/* 선택된 메뉴 강조 */
+.sub-menu li:nth-child(1) a {
+  color: #555;
+  font-weight: 550;
+}
