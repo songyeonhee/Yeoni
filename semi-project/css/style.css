@@ -19,6 +19,7 @@
   --color--border1: #c7c7c7;
   --color--border2: #d8d8d8;
   --color--border3: #e6eaed;
+  --color--light-green: #64b44e15;
 
   /* 공지사항 */
   --color--must-text: #e02e2a;
@@ -39,7 +40,7 @@ ul {
   list-style: none;
 }
 
-.btn {
+button {
   border: none;
   background: none;
 }
