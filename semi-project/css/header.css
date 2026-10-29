@@ -1,4 +1,18 @@
-/* 헤더 */
+body > .wrapper {
+  display: flex;
+  width: 100%;
+  max-width: 1400px;
+  min-height: 100vh;
+  margin: 0 auto;
+  position: relative;
+}
+
+body > .wrapper > .layout {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin-left: 270px;
+}
 
 .logo {
   width: 230px;
@@ -95,14 +109,22 @@ ul li a {
 }
 
 nav {
-  width: 280px;
+  position: fixed;
+  top: 0;
+
+  width: 270px;
   height: 100vh;
+
   display: flex;
   flex-direction: column;
+
+  overflow-y: auto;
+  z-index: 100;
+
   background: linear-gradient(
     to bottom,
-    var(--color--deepteal) 0%,
-    var(--color--deepteal) 60%,
+    var(--color-primary) 0%,
+    var(--color-primary) 60%,
     var(--color--white) 100%
   );
 }
@@ -170,4 +192,54 @@ nav {
   display: block;
   width: 16px;
   height: 16px;
+}
+
+/* 헤더 - 검색창 */
+.search-bar {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 70px;
+  min-width: 300px;
+  margin-bottom: 35px;
+  border-bottom: 1px solid var(--color--border1);
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar input {
+  width: 250px;
+  height: 40px;
+  border: 1px solid #d9d9d9;
+  border-radius: 20px;
+  padding: 0 35px 0 17px;
+  margin-right: 25px;
+  outline: none;
+}
+
+.search-bar input::placeholder {
+  font-family: "Instrument Sans", sans-serif;
+  color: #ccc;
+  font-size: 15px;
+}
+
+.search-bar .search-btn {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border: none;
+  background: none;
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.search-bar img {
+  display: block;
+  width: 19px;
+  height: 19px;
 }

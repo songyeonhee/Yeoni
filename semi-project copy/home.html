@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>K-culture</title>
+    <script src=""></script>
+    <script src="https://code.jquery.com/jquery-4.0.0.js"></script>
+    <script src="javaScript/home.js"></script>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/home.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/sidebar.css" />
+  </head>
+  <body>
+    <!-- 헤더 -->
+    <div class="wrapper">
+      <nav>
+          <div class="f-cc">
+            <div class="logo f-cc">
+              <img src="assets/logo-mark.png" alt="" />
+              <img src="assets/logo-text.png" alt="" />
+            </div>
+          </div>
+          <!-- 로그인 X -->
+          <!-- <div class="auth-menu f-cc">
+            <div class="auth-link">
+              <a href="#">Login</a>
+            </div>
+            <span>|</span>
+            <div class="auth-link">
+              <a href="#">Sign Up</a>
+            </div>
+          </div> -->
+          <!-- 로그인 O -->
+          <div class="user-profile">
+            <!-- 닉네임 길어질 시 줄바꿈이나 영역을 넘치지 않고
+             말줄임 표시되도록 추가 -->
+            <div class="login-user">
+              <a href="#"
+                ><img src="assets/icon-user-profile-3682323.png" alt="" />
+                Esther
+              </a>
+            </div>
+            <div class="nationality">
+              <img src="assets/language-svgrepo-com.svg" alt="" />
+              US
+            </div>
+          </div>
+          <div class="nav-side">
+            <ul class="main-menu">
+              <li><a href="#">Menu</a></li>
+            </ul>
+            <ul class="sub-menu">
+              <li class="active-menu">
+                <a href="#">Home</a>
+              </li>
+              <li>
+                <a href="#">All Posts</a>
+              </li>
+              <li>
+                <a href="#">Notice</a>
+              </li>
+              <li>
+                <a href="#">Discover K-Culture</a>
+              </li>
+              <li>
+                <a href="#">Free Board</a>
+              </li>
+              <li>
+                <a href="#">Q&A</a>
+              </li>
+            </ul>
+          </div>
+          <div class="new-post">
+            <a href="#" class="f-cc">
+              <img src="assets/icon-plus-sign-3114793.png" alt="" />NEW POST
+            </a>
+          </div>
+        </nav>
+        <div class="layout">
+      <header class="home-header">
+
+        <div class="search-bar">
+          <form>
+            <input type="text" name="search" value="" placeholder="Search" />
+            <button class="search-btn" type="search">
+              <img src="assets/icon-search-6328608.png" alt="" />
+            </button>
+          </form>
+        </div>
+      </header>
+
+      <!-- 메인 -->
+
+        <div class="content-wrapper">
+          <main>
+            <div class="wrapper">
+            <section class="main-s1">
+              <table class="board board-notice">
+                <caption>
+                  <div class="main-caption">
+                    <a href="#">Notice</a>
+                    <a href="#">
+                      <img src="assets/icon-arrow-right-6423875.png" alt="" />
+                    </a>
+                  </div>
+                </caption>
+                <tr>
+                  <td class="notice-symbol must-read">MUST-READ</td>
+                  <td class="notice-title">
+                    <a href="#">Community Guidelines</a>
+                  </td>
+                  <td class="notice-hits">3</td>
+                </tr>
+                <tr>
+                  <td class="notice-symbol notice">NOTICE</td>
+                  <td class="notice-title">
+                    <a href="#">Welcome to K-culture !</a>
+                  </td>
+                  <td class="notice-hits">11</td>
+                </tr>
+                <tr>
+                  <td class="notice-symbol must-read">MUST-READ</td>
+                  <td class="notice-title">
+                    <a href="#">Community Guidelines</a>
+                  </td>
+                  <td class="notice-hits">3</td>
+                </tr>
+                <tr>
+                  <td class="notice-symbol must-read">MUST-READ</td>
+                  <td class="notice-title">
+                    <a href="#">Community Guidelines</a>
+                  </td>
+                  <td class="notice-hits">3</td>
+                </tr>
+                <tr>
+                  <td class="notice-symbol must-read">MUST-READ</td>
+                  <td class="notice-title">
+                    <a href="#">Community Guidelines</a>
+                  </td>
+                  <td class="notice-hits">3</td>
+                </tr>
+              </table>
+            </section>
+            <section class="main-s2">
+              <div class="festival-api"></div>
+            </section></div>
+            <div class="wrapper">
+            <section class="main-s3">
+              <ul>
+                <li class="picture-posts">
+                  <dl class="p-post">
+                    <dt class="p-img">
+                      <a href="#"><img src="imgs/cat1.jpg" alt="" /></a>
+                    </dt>
+                    <dd class="p-title">
+                      <a href="#">공양이</a>
+                    </dd>
+                    <dd class="p-writer">여니</dd>
+                    <dd class="p-info">
+                      <span>26.10.29</span>
+                      <span class="p-view">
+                        <img src="assets/icon-open-eye-829117.png" alt="" />
+                        <span class="p-hits">13</span>
+                      </span>
+                    </dd>
+                  </dl>
+                  <dl class="p-post">
+                    <dt class="p-img">
+                      <a href="#"><img src="imgs/cat2.jpg" alt="" /></a>
+                    </dt>
+                    <dd class="p-title">
+                      <a href="#">공양이</a>
+                    </dd>
+                    <dd class="p-writer">여니</dd>
+                    <dd class="p-info">
+                      <span>26.10.29</span>
+                      <span class="p-view">
+                        <img src="assets/icon-open-eye-829117.png" alt="" />
+                        <span class="p-hits">13</span>
+                      </span>
+                    </dd>
+                  </dl>
+                  <dl class="p-post">
+                    <dt class="p-img">
+                      <a href="#"><img src="imgs/cat3.jpg" alt="" /></a>
+                    </dt>
+                    <dd class="p-title">
+                      <a href="#">공양이</a>
+                    </dd>
+                    <dd class="p-writer">여니</dd>
+                    <dd class="p-info">
+                      <span>26.10.29</span>
+                      <span class="p-view">
+                        <img src="assets/icon-open-eye-829117.png" alt="" />
+                        <span class="p-hits">13</span>
+                      </span>
+                    </dd>
+                  </dl>
+
+                </li>
+                <li class="picture-posts">
+                  <dl class="p-post">
+                    <dt class="p-img">
+                      <a href="#"><img src="imgs/cat1.jpg" alt="" /></a>
+                    </dt>
+                    <dd class="p-title">
+                      <a href="#">공양이</a>
+                    </dd>
+                    <dd class="p-writer">여니</dd>
+                    <dd class="p-info">
+                      <span>26.10.29</span>
+                      <span class="p-view">
+                        <img src="assets/icon-open-eye-829117.png" alt="" />
+                        <span class="p-hits">13</span>
+                      </span>
+                    </dd>
+                  </dl>
+                  <dl class="p-post">
+                    <dt class="p-img">
+                      <a href="#"><img src="imgs/cat2.jpg" alt="" /></a>
+                    </dt>
+                    <dd class="p-title">
+                      <a href="#">공양이</a>
+                    </dd>
+                    <dd class="p-writer">여니</dd>
+                    <dd class="p-info">
+                      <span>26.10.29</span>
+                      <span class="p-view">
+                        <img src="assets/icon-open-eye-829117.png" alt="" />
+                        <span class="p-hits">13</span>
+                      </span>
+                    </dd>
+                  </dl>
+                  <dl class="p-post">
+                    <dt class="p-img">
+                      <a href="#"><img src="imgs/cat3.jpg" alt="" /></a>
+                    </dt>
+                    <dd class="p-title">
+                      <a href="#">공양이</a>
+                    </dd>
+                    <dd class="p-writer">여니</dd>
+                    <dd class="p-info">
+                      <span>26.10.29</span>
+                      <span class="p-view">
+                        <img src="assets/icon-open-eye-829117.png" alt="" />
+                        <span class="p-hits">13</span>
+                      </span>
+                    </dd>
+                  </dl>
+                  </dl>
+                </li>
+              </ul>
+              <!-- <div class="picture-posts">
+                <div class="p-post">
+                  <a href="#" class="post-img"
+                    ><img src="imgs/cat1.jpg" alt=""
+                  /></a>
+                  <a href="#"><p class="picture-title">공양이</p></a>
+                  <p class="picture-writer">여니</p>
+                  <p class="picture-info">
+                    <span class="p-writedate">26.10.29</span>
+                    <span>
+                      <img src="assets/icon-open-eye-829117.png" alt="" />
+                      13
+                    </span>
+                  </p>
+                </div>
+              </div> -->
+            </section>
+            <section class="main-s4">
+              <caption>
+                <div class="main-caption">
+                  All Posts
+                  <a href="#">
+                      <img src="assets/icon-arrow-right-6423875.png" alt="" />
+                    </a>
+                </div>
+              </caption>
+              <table class="board">
+                <tr class="board-line">
+                  <td class="notice-hits">
+                    5
+                  </td>
+                  <td class="notice-title"><a href="#">자려고 누웠는데 갑자기</a></td>
+                  <td class="notice-hits">3</td>
+                </tr>
+              </table>
+            </section></div>
+          </main>
+
+          <div class="sidebar">
+            <!-- 화면이 작아지면 맨 아래로 내려가도록 -->
+            <div class="sidebar-s1">
+              <ul class="sidebar-tabs">
+                <li class="tab-btn active-tab-btn" data-tab="side-s1-tab1">
+                  All Posts
+                </li>
+                <li class="tab-btn" data-tab="side-s1-tab2">K-Culture</li>
+                <li class="tab-btn" data-tab="side-s1-tab3">Free Board</li>
+              </ul>
+
+              <div class="sidebar-contents">
+                <table>
+                  <tbody class="tab-contents active-tab-contents">
+                    <tr class="tab-content" id="side-s1-tab1">
+                      <td class="content-rank">1</td>
+                      <td class="content-title">
+                        <a href="">Community Guidelines</a>
+                      </td>
+                      <td class="content-like">
+                        <img src="assets/icons-like-96.png" alt="" />96
+                      </td>
+                    </tr>
+                    <tr class="tab-content" id="side-s1-tab2">
+                      <td class="content-rank">2</td>
+                      <td class="content-title">
+                        <a href="">Welcome to K-culture !</a>
+                      </td>
+                      <td class="content-like">
+                        <img src="assets/icons-like-96.png" alt="" />96
+                      </td>
+                    </tr>
+                    <tr class="tab-content" id="side-s1-tab3">
+                      <td class="content-rank">3</td>
+                      <td class="content-title">
+                        <a href="">Community Guidelines</a>
+                      </td>
+                      <td class="content-like">
+                        <img src="assets/icons-like-96.png" alt="" />96
+                      </td>
+                    </tr>
+                    <tr class="tab-content" id="side-s1-tab3">
+                      <td class="content-rank">3</td>
+                      <td class="content-title">
+                        <a href="">Community Guidelines</a>
+                      </td>
+                      <td class="content-like">
+                        <img src="assets/icons-like-96.png" alt="" />96
+                      </td>
+                    </tr>
+                    <tr class="tab-content" id="side-s1-tab3">
+                      <td class="content-rank">3</td>
+                      <td class="content-title">
+                        <a href="">Community Guidelines</a>
+                      </td>
+                      <td class="content-like">
+                        <img src="assets/icons-like-96.png" alt="" />96
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="sidebar-s2">
+              <ul class="sidebar-tabs">
+                <li class="tab-btn active-tab-btn" data-tab="side-s1-tab1">
+                  All Posts
+                </li>
+                <li class="tab-btn" data-tab="side-s1-tab2">K-Culture</li>
+                <li class="tab-btn" data-tab="side-s1-tab3">Free Board</li>
+              </ul>
+
+              <div class="sidebar-contents">
+                <table>
+                  <tbody class="tab-contents active-tab-contents">
+                    <tr class="tab-content" id="side-s1-tab1">
+                      <td class="content-rank">1</td>
+                      <td class="content-title">
+                        <a href="">Community Guidelines</a>
+                      </td>
+                      <td class="content-like">
+                        <img src="assets/icons-like-96.png" alt="" />96
+                      </td>
+                    </tr>
+                    <tr class="tab-content" id="side-s1-tab2">
+                      <td class="content-rank">2</td>
+                      <td class="content-title">
+                        <a href="">Welcome to K-culture !</a>
+                      </td>
+                      <td class="content-like">
+                        <img src="assets/icons-like-96.png" alt="" />96
+                      </td>
+                    </tr>
+                    <tr class="tab-content" id="side-s1-tab3">
+                      <td class="content-rank">3</td>
+                      <td class="content-title">
+                        <a href="">Community Guidelines</a>
+                      </td>
+                      <td class="content-like">
+                        <img src="assets/icons-like-96.png" alt="" />96
+                      </td>
+                    </tr>
+                    <tr class="tab-content" id="side-s1-tab3">
+                      <td class="content-rank">3</td>
+                      <td class="content-title">
+                        <a href="">Community Guidelines</a>
+                      </td>
+                      <td class="content-like">
+                        <img src="assets/icons-like-96.png" alt="" />96
+                      </td>
+                    </tr>
+                    <tr class="tab-content" id="side-s1-tab3">
+                      <td class="content-rank">3</td>
+                      <td class="content-title">
+                        <a href="">Community Guidelines</a>
+                      </td>
+                      <td class="content-like">
+                        <img src="assets/icons-like-96.png" alt="" />96
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 푸터 -->
+        <footer>
+          <div class="f-section">
+            <div class="f-logo">
+              <img src="assets/logo.png" alt="" />
+            </div>
+            <div class="copy">
+              <p class="copyright">&copy; 2026, All Rights Reserved</p>
+              <p class="copydesc">
+                <span>김민성</span><span>이우민</span><span>양영준</span
+                ><span>송연희</span>
+              </p>
+              <p class="copyinfo">
+                <span>이용약관</span>
+                <span>개인정보처리방침</span>
+                <span>개인 정보 설정</span>
+                <span>위치정보이용약관</span>
+              </p>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>
