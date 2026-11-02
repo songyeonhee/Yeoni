@@ -5,6 +5,12 @@
   display: flex;
   flex-direction: column;
   gap: 50px;
+  flex-shrink: 0;
+}
+
+.sidebar-s1,
+.sidebar-s2 {
+  height: 200px;
 }
 
 .sidebar-tabs {
@@ -18,27 +24,24 @@
   font-weight: 500;
   height: 30px;
   line-height: 30px;
-  color: var(--color--deepteal);
+  color: var(--color-primary);
   background: var(--color-surface);
-  border: 1px solid var(--color--deepteal);
   border-bottom: none;
   border-radius: 10px 10px 0 0;
+  cursor: pointer;
 }
 
 /* active 탭 */
 .tab-btn.active-tab-btn {
-  background: var(--color--green);
-  color: var(--color--white);
+  background: var(--color-primary-light);
 }
 
 .tab-contents.active-tab-contents {
-  background: var(--color--light-green);
   display: table-row-group;
 }
 
 .sidebar-contents {
-  background: var(--color-surface);
-  border: 1px solid var(--color--deepteal);
+  background: var(--color-primary-light);
   border-radius: 0 0 5px 5px;
   border-top: none;
 }
@@ -52,14 +55,6 @@
 
 .tab-contents {
   display: none;
-}
-
-.tab-content {
-  border-bottom: 1px dotted var(--color--deepteal);
-}
-
-table .tab-content:last-child {
-  border-bottom: none;
 }
 
 .content-rank {

@@ -1,0 +1,497 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/login.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/sidebar.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <nav class="home-nav">
+        <div class="f-cc">
+          <div class="logo f-cc">
+            <img src="assets/logo-mark.png" alt="" />
+            <img src="assets/logo-text.png" alt="" />
+          </div>
+        </div>
+        <!-- 로그인 X -->
+        <!-- <div class="auth-menu f-cc">
+            <div class="auth-link">
+              <a href="#">Login</a>
+            </div>
+            <span>|</span>
+            <div class="auth-link">
+              <a href="#">Sign Up</a>
+            </div>
+          </div> -->
+        <!-- 로그인 O -->
+        <div class="user-profile">
+          <!-- 닉네임 길어질 시 줄바꿈이나 영역을 넘치지 않고
+             말줄임 표시되도록 추가 -->
+          <div class="login-user">
+            <a href="#"
+              ><img src="assets/icon-user-profile-3682323.png" alt="" />
+              Esther
+            </a>
+          </div>
+          <div class="nationality">
+            <img src="assets/language-svgrepo-com.svg" alt="" />
+            US
+          </div>
+        </div>
+        <div class="nav-side">
+          <ul class="main-menu">
+            <li><a href="#">Menu</a></li>
+          </ul>
+          <ul class="sub-menu">
+            <li class="active-menu">
+              <a href="#">Home</a>
+            </li>
+            <li>
+              <a href="#">All Posts</a>
+            </li>
+            <li>
+              <a href="#">Notice</a>
+            </li>
+            <li>
+              <a href="#">Discover K-Culture</a>
+            </li>
+            <li>
+              <a href="#">Free Board</a>
+            </li>
+            <li>
+              <a href="#">Q&A</a>
+            </li>
+          </ul>
+        </div>
+        <div class="new-post">
+          <a href="#" class="f-cc">
+            <img src="assets/icon-plus-sign-3114793.png" alt="" />NEW POST
+          </a>
+        </div>
+      </nav>
+      <div class="layout">
+        <header>
+          <div class="search-bar">
+            <form>
+              <input type="text" name="search" value="" placeholder="Search" />
+              <button class="search-btn" type="search">
+                <img src="assets/icon-search-6328608.png" alt="" />
+              </button>
+            </form>
+          </div>
+        </header>
+
+        <!-- 메인 -->
+        <div class="content-wrapper">
+          <div class="login-page">
+            <div class="login-box">
+              <h2>로그인</h2>
+              <img
+                src="../resources/img/logo.jpg"
+                alt=""
+                class="login-logo"
+                alt="K-Culture 로고"
+              />
+              <form action="" class="login-form" method="post">
+                <div class="form-group">
+                  <input
+                    type="text"
+                    name="id"
+                    class="form-input"
+                    placeholder="아이디"
+                    requried
+                    autofocus
+                  />
+                </div>
+                <div class="form-group">
+                  <input
+                    type="password"
+                    name="password"
+                    class="form-input"
+                    placeholder="비밀번호"
+                    requried
+                  />
+                </div>
+                <button type="submit" class="btn btn-primary">로그인</button>
+              </form>
+
+              <div class="social-login">
+                <div class="social-divider">소셜 로그인</div>
+                <div class="social-btn">
+                  <a href="#">
+                    <img
+                      src="imgs/google.png"
+                      alt="Google로 로그인"
+                      class="google-login"
+                    />Google로 로그인</a
+                  >
+                  <a href="#">
+                    <img
+                      src="imgs/kakao_login_kr_large.png"
+                      alt="카카오로 로그인"
+                  /></a>
+                  <a href="#">
+                    <img
+                      src="imgs/NAVER_login_Dark_KR_green_center_H56.png"
+                      alt="네이버로 로그인"
+                  /></a>
+                </div>
+                <div class="social-desc">
+                  최초 로그인 시 소셜 계정 정보로 회원 계정이 자동 생성되거나
+                  기존 계정에 연결됩니다.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="sidebar">
+            <div class="sidebar-s1">
+              <ul class="sidebar-tabs">
+                <li class="tab-btn active-tab-btn" data-tab="side-s1-tab1">
+                  All Posts
+                </li>
+                <li class="tab-btn" data-tab="side-s1-tab2">K-Culture</li>
+                <li class="tab-btn" data-tab="side-s1-tab3">Free Board</li>
+              </ul>
+
+              <div class="sidebar-contents">
+                <table>
+                  <tbody
+                    class="tab-contents active-tab-contents"
+                    id="side-s1-tab1"
+                  >
+                    <tr class="tab-content">
+                      <td class="content-rank">1</td>
+                      <td class="content-title">
+                        <a href="">Community Guidelines</a>
+                      </td>
+                      <td class="content-like">
+                        <img src="assets/icons-like-96.png" alt="" />96
+                      </td>
+                    </tr>
+                    <tr class="tab-content">
+                      <td class="content-rank">2</td>
+                      <td class="content-title">
+                        <a href="">Welcome to K-culture !</a>
+                      </td>
+                      <td class="content-like">
+                        <img src="assets/icons-like-96.png" alt="" />96
+                      </td>
+                    </tr>
+                    <tr class="tab-content">
+                      <td class="content-rank">3</td>
+                      <td class="content-title">
+                        <a href="">Community Guidelines</a>
+                      </td>
+                      <td class="content-like">
+                        <img src="assets/icons-like-96.png" alt="" />96
+                      </td>
+                    </tr>
+                    <tr class="tab-content">
+                      <td class="content-rank">4</td>
+                      <td class="content-title">
+                        <a href="">Welcome to K-culture !</a>
+                      </td>
+                      <td class="content-like">
+                        <img src="assets/icons-like-96.png" alt="" />96
+                      </td>
+                    </tr>
+                    <tr class="tab-content">
+                      <td class="content-rank">5</td>
+                      <td class="content-title">
+                        <a href="">Community Guidelines</a>
+                      </td>
+                      <td class="content-like">
+                        <img src="assets/icons-like-96.png" alt="" />96
+                      </td>
+                    </tr>
+                  </tbody>
+                  <tbody class="tab-contents" id="side-s1-tab2">
+                    <tr class="tab-content">
+                      <td class="content-rank">1</td>
+                      <td class="content-title">
+                        <a href="">Community Guidelines</a>
+                      </td>
+                      <td class="content-like">
+                        <img src="assets/icons-like-96.png" alt="" />96
+                      </td>
+                    </tr>
+                    <tr class="tab-content">
+                      <td class="content-rank">2</td>
+                      <td class="content-title">
+                        <a href="">Welcome to K-culture !</a>
+                      </td>
+                      <td class="content-like">
+                        <img src="assets/icons-like-96.png" alt="" />96
+                      </td>
+                    </tr>
+                    <tr class="tab-content">
+                      <td class="content-rank">3</td>
+                      <td class="content-title">
+                        <a href="">Community Guidelines</a>
+                      </td>
+                      <td class="content-like">
+                        <img src="assets/icons-like-96.png" alt="" />96
+                      </td>
+                    </tr>
+                    <tr class="tab-content">
+                      <td class="content-rank">2</td>
+                      <td class="content-title">
+                        <a href="">Welcome to K-culture !</a>
+                      </td>
+                      <td class="content-like">
+                        <img src="assets/icons-like-96.png" alt="" />96
+                      </td>
+                    </tr>
+                    <tr class="tab-content">
+                      <td class="content-rank">3</td>
+                      <td class="content-title">
+                        <a href="">Community Guidelines</a>
+                      </td>
+                      <td class="content-like">
+                        <img src="assets/icons-like-96.png" alt="" />96
+                      </td>
+                    </tr>
+                  </tbody>
+                  <tbody class="tab-contents" id="side-s1-tab3">
+                    <tr class="tab-content">
+                      <td class="content-rank">1</td>
+                      <td class="content-title">
+                        <a href="">Community Guidelines</a>
+                      </td>
+                      <td class="content-like">
+                        <img src="assets/icons-like-96.png" alt="" />96
+                      </td>
+                    </tr>
+                    <tr class="tab-content">
+                      <td class="content-rank">2</td>
+                      <td class="content-title">
+                        <a href="">Welcome to K-culture !</a>
+                      </td>
+                      <td class="content-like">
+                        <img src="assets/icons-like-96.png" alt="" />96
+                      </td>
+                    </tr>
+                    <tr class="tab-content">
+                      <td class="content-rank">3</td>
+                      <td class="content-title">
+                        <a href="">Community Guidelines</a>
+                      </td>
+                      <td class="content-like">
+                        <img src="assets/icons-like-96.png" alt="" />96
+                      </td>
+                    </tr>
+                    <tr class="tab-content">
+                      <td class="content-rank">2</td>
+                      <td class="content-title">
+                        <a href="">Welcome to K-culture !</a>
+                      </td>
+                      <td class="content-like">
+                        <img src="assets/icons-like-96.png" alt="" />96
+                      </td>
+                    </tr>
+                    <tr class="tab-content">
+                      <td class="content-rank">3</td>
+                      <td class="content-title">
+                        <a href="">Community Guidelines</a>
+                      </td>
+                      <td class="content-like">
+                        <img src="assets/icons-like-96.png" alt="" />96
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="sidebar-s2">
+              <ul class="sidebar-tabs">
+                <li class="tab-btn active-tab-btn" data-tab="side-s2-tab1">
+                  All Posts
+                </li>
+                <li class="tab-btn" data-tab="side-s2-tab2">K-Culture</li>
+                <li class="tab-btn" data-tab="side-s2-tab3">Free Board</li>
+              </ul>
+
+              <div class="sidebar-contents">
+                <table>
+                  <tbody
+                    class="tab-contents active-tab-contents"
+                    id="side-s2-tab1"
+                  >
+                    <tr class="tab-content">
+                      <td class="content-rank">1</td>
+                      <td class="content-title">
+                        <a href="">냠냠</a>
+                      </td>
+                      <td class="content-like">
+                        <img src="assets/icons-like-96.png" alt="" />96
+                      </td>
+                    </tr>
+                    <tr class="tab-content">
+                      <td class="content-rank">2</td>
+                      <td class="content-title">
+                        <a href="">Welcome to K-culture !</a>
+                      </td>
+                      <td class="content-like">
+                        <img src="assets/icons-like-96.png" alt="" />96
+                      </td>
+                    </tr>
+                    <tr class="tab-content">
+                      <td class="content-rank">3</td>
+                      <td class="content-title">
+                        <a href="">Community Guidelines</a>
+                      </td>
+                      <td class="content-like">
+                        <img src="assets/icons-like-96.png" alt="" />96
+                      </td>
+                    </tr>
+                    <tr class="tab-content">
+                      <td class="content-rank">4</td>
+                      <td class="content-title">
+                        <a href="">Welcome to K-culture !</a>
+                      </td>
+                      <td class="content-like">
+                        <img src="assets/icons-like-96.png" alt="" />96
+                      </td>
+                    </tr>
+                    <tr class="tab-content">
+                      <td class="content-rank">5</td>
+                      <td class="content-title">
+                        <a href="">Community Guidelines</a>
+                      </td>
+                      <td class="content-like">
+                        <img src="assets/icons-like-96.png" alt="" />96
+                      </td>
+                    </tr>
+                  </tbody>
+                  <tbody class="tab-contents" id="side-s2-tab2">
+                    <tr class="tab-content">
+                      <td class="content-rank">1</td>
+                      <td class="content-title">
+                        <a href="">Community Guidelines</a>
+                      </td>
+                      <td class="content-like">
+                        <img src="assets/icons-like-96.png" alt="" />96
+                      </td>
+                    </tr>
+                    <tr class="tab-content">
+                      <td class="content-rank">2</td>
+                      <td class="content-title">
+                        <a href="">Welcome to K-culture !</a>
+                      </td>
+                      <td class="content-like">
+                        <img src="assets/icons-like-96.png" alt="" />96
+                      </td>
+                    </tr>
+                    <tr class="tab-content">
+                      <td class="content-rank">3</td>
+                      <td class="content-title">
+                        <a href="">Community Guidelines</a>
+                      </td>
+                      <td class="content-like">
+                        <img src="assets/icons-like-96.png" alt="" />96
+                      </td>
+                    </tr>
+                    <tr class="tab-content">
+                      <td class="content-rank">2</td>
+                      <td class="content-title">
+                        <a href="">Welcome to K-culture !</a>
+                      </td>
+                      <td class="content-like">
+                        <img src="assets/icons-like-96.png" alt="" />96
+                      </td>
+                    </tr>
+                    <tr class="tab-content">
+                      <td class="content-rank">3</td>
+                      <td class="content-title">
+                        <a href="">Community Guidelines</a>
+                      </td>
+                      <td class="content-like">
+                        <img src="assets/icons-like-96.png" alt="" />96
+                      </td>
+                    </tr>
+                  </tbody>
+                  <tbody class="tab-contents" id="side-s2-tab3">
+                    <tr class="tab-content">
+                      <td class="content-rank">1</td>
+                      <td class="content-title">
+                        <a href="">Community Guidelines</a>
+                      </td>
+                      <td class="content-like">
+                        <img src="assets/icons-like-96.png" alt="" />96
+                      </td>
+                    </tr>
+                    <tr class="tab-content">
+                      <td class="content-rank">2</td>
+                      <td class="content-title">
+                        <a href="">Welcome to K-culture !</a>
+                      </td>
+                      <td class="content-like">
+                        <img src="assets/icons-like-96.png" alt="" />96
+                      </td>
+                    </tr>
+                    <tr class="tab-content">
+                      <td class="content-rank">3</td>
+                      <td class="content-title">
+                        <a href="">Community Guidelines</a>
+                      </td>
+                      <td class="content-like">
+                        <img src="assets/icons-like-96.png" alt="" />96
+                      </td>
+                    </tr>
+                    <tr class="tab-content">
+                      <td class="content-rank">2</td>
+                      <td class="content-title">
+                        <a href="">Welcome to K-culture !</a>
+                      </td>
+                      <td class="content-like">
+                        <img src="assets/icons-like-96.png" alt="" />96
+                      </td>
+                    </tr>
+                    <tr class="tab-content">
+                      <td class="content-rank">3</td>
+                      <td class="content-title">
+                        <a href="">Community Guidelines</a>
+                      </td>
+                      <td class="content-like">
+                        <img src="assets/icons-like-96.png" alt="" />96
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 푸터 -->
+        <footer>
+          <div class="f-section">
+            <div class="f-logo">
+              <img src="assets/logo.png" alt="" />
+            </div>
+            <div class="copy">
+              <p class="copyright">&copy; 2026, All Rights Reserved</p>
+              <p class="copydesc">
+                <span>김민성</span><span>이우민</span><span>양영준</span
+                ><span>송연희</span>
+              </p>
+              <p class="copyinfo">
+                <span>이용약관</span>
+                <span>개인정보처리방침</span>
+                <span>개인 정보 설정</span>
+                <span>위치정보이용약관</span>
+              </p>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>
