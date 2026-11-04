@@ -12,26 +12,11 @@ main {
   margin-right: 20px;
 }
 
-.board {
-  line-height: 1.6;
-  width: 100%;
-  padding: 10px 10px 10px 10px;
-}
-
-.main-caption {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: var(--font-size-xl);
-  font-weight: 650;
-  border-bottom: 2px solid var(--color-border);
-  padding: 6px 0 5px 10px;
-}
-
 .main-caption a {
   height: 25px;
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 
 .main-caption a img {
@@ -39,32 +24,6 @@ main {
   width: 29px;
   height: 19px;
   padding-right: 10px;
-}
-
-.notice-symbol {
-  width: 65px;
-  display: inline-block;
-  text-align: center;
-  font-size: 0.6rem;
-  color: var(--color-primary);
-  background: var(--color-primary-light);
-  padding: 3px 5px;
-  border-radius: 10px;
-  line-height: 1;
-}
-
-.notice-title a {
-  display: block;
-  color: var(--color-text-heading);
-  font-size: var(--font-size-sm);
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.notice-hits {
-  color: var(--color-text-heading);
-  font-size: var(--font-size-sm);
 }
 
 /* 축제 api */
@@ -138,9 +97,69 @@ main {
 
 /* 전체 게시물 보기 */
 .main-s4 {
-  width: 350px;
-  height: 430px;
-  border: 1px solid #333;
   background: var(--color-surface);
+  width: 350px;
+  height: 350px;
   border-radius: var(--radius-md);
+  flex-shrink: 0;
+}
+
+.notice-symbol {
+  width: 65px;
+  display: inline-block;
+  text-align: center;
+  font-size: 0.6rem;
+  color: var(--color-primary);
+  background: var(--color-primary-light);
+  padding: 3px 5px;
+  border-radius: 10px;
+  line-height: 1;
+}
+
+.notice-title a {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: start;
+}
+
+.notice-hits {
+  text-align: end;
+  padding-right: 3px;
+}
+
+.board {
+  line-height: 1.6;
+  width: 100%;
+  font-size: var(--font-size-sm);
+  color: var(--color-text);
+  padding: 10px 10px 10px 10px;
+}
+
+.main-caption {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  background: var(--color-primary);
+  color: var(--color-text-white);
+  /* border-bottom: 2px solid var(--color-border); */
+  padding: 7px 7px 7px 20px;
+  border-radius: var(--radius-2xl) 0 0 0;
+}
+
+.festival-caption {
+  padding: 10px 7px 5px 20px;
+  font-size: var(--font-size-xl);
+  font-weight: 650;
+}
+
+.board-line td {
+  border-bottom: 1px dotted var(--color-border);
+}
+
+.post-num {
+  text-align: start;
 }

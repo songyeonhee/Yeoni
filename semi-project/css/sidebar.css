@@ -4,7 +4,7 @@
   width: 270px;
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: 35px;
   flex-shrink: 0;
 }
 
@@ -48,7 +48,6 @@
 
 .sidebar-contents table {
   width: 100%;
-  table-layout: fixed;
   border-collapse: collapse;
   font-size: 0.75rem;
 }
